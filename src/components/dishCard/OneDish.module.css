@@ -1,0 +1,44 @@
+.Dish{
+    padding: 20px;
+    margin: 20px;
+    border: 5px solid black;
+    max-width: 500px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.main img{
+     width: 200px;
+ }
+.name{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+}
+
+.properties{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.like_comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.like_comment>div{
+    margin: 10px 20px;
+}
+.comments>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+

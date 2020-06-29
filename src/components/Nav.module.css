@@ -1,0 +1,20 @@
+.NavBar {
+    list-style-type: none;
+    display: flex;
+    background-color: #fae1ff;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.NavBar li {
+    list-style-type: none;
+    padding: 5px 20px;
+}
+.NavBar img:hover{
+    opacity: 0.5;
+}
+.active{
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(250deg) brightness(119%);
+}

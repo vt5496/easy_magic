@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+import Nav from './components/Nav'
+
+import Home from "./components/home/home";
+import Favorites from './components/favorites/favorites';
+import Search from './components/search/search';
+import ShoppingCart from "./components/shoppingCart/shoppingCart";
+import Profile from "./components/profile/profile";
+
+
+import s from './App.module.css';
+
+const App = (props) => {
+    return (
+        <BrowserRouter>
+            <div>
+                <Route path='/home' render={() => <Home user={props.state.user} catalog={props.state.catalog} dispatch={props.dispatch}/>}/>
+                <Route path='/favorites' render={() => <Favorites user={props.state.user} catalog={props.state.catalog} dispatch={props.dispatch}/>}/>
+                <Route path='/search' render={() => <Search user={props.state.user} catalog={props.state.catalog} findText={props.state.finder.text} dispatch={props.dispatch}/>}/>
+                <Route path='/shopcart' render={() => <ShoppingCart />}/>
+                <Route path='/profile' render={() => <Profile />}/>
+
+                <Nav />
+            </div>
+        </BrowserRouter>
+    )
+};
 
 export default App;
