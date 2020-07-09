@@ -7,7 +7,7 @@ import s from './favorites.module.css';
 
 const Favorites = (props) => {
     let MainFavFilter = props.catalog.map(dish => {
-        if (dish.fav === true) {
+        if (props.user.favorites.includes(dish.idDish) === true) {
             return <OneDish user={props.user} dish={dish} dispatch={props.dispatch}/>
         }
     });

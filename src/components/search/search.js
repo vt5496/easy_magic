@@ -1,18 +1,7 @@
-import React from "react";
-
-import s from './search.module.css'
-import OneDish from "../dishCard/OneDish";
-import {readNewFindTextActionCreator} from "../../redux/store";
-
-const Search = (props) =>{
-
-    let newFindElement = React.createRef();
-    let readNewFindText = () => {
-        let text = newFindElement.current.value;
-        props.dispatch(readNewFindTextActionCreator(text));
-    };
+//import React from "react";
 
 
+/*
 
     let buttonLetFind = () =>{
         let findList = props.catalog.map(dish => {
@@ -32,6 +21,6 @@ const Search = (props) =>{
             {searchFilter}
         </div>
     )
-};
+;
 
-export default Search;
+export default Search;*/

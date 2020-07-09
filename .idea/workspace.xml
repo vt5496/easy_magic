@@ -1,53 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/OneDish.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/comments/comments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/comments/comments.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/comments/oneComment/oneComment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/comments/oneComment/oneComment.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/likes/like.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/likes/like.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/favorites/favorites.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/favorites/favorites.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/branded/branded.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/branded/branded.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/catalog/catalog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/catalog/catalog.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/home.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/news/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/news/news.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/sale/sale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/sale/sale.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/profile.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/search.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shoppingCart/shoppingCart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shoppingCart/shoppingCart.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/local_grocery_store.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/person_outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/star_outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dishCard/favorites/favorite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dishCard/favorites/favorite.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/dish-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/search-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dishCard/likes/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/likes/like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favorites/favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favorites/favorites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +59,10 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -83,16 +72,20 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/dishCard/favorites" />
+      <recent name="F:\WebDev\easy_magic\src\components\dishCard" />
+      <recent name="F:\WebDev\easy_magic\src\components\catalog" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\WebDev\easy_magic\src" />
       <recent name="F:\WebDev\easy_magic\src\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\WebDev\easy_magic\src\components\dishCard" />
-      <recent name="F:\WebDev\easy_magic\src\components\catalog" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -124,11 +117,25 @@
       <workItem from="1592667575728" duration="9278000" />
       <workItem from="1592725890552" duration="10802000" />
       <workItem from="1592828829236" duration="43235000" />
+      <workItem from="1593428559560" duration="6921000" />
+      <workItem from="1593859325060" duration="10503000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1593427116011">
@@ -139,9 +146,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="723" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1592843111495" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592924237447">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="460" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594287517376">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state x="460" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1594287517376" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592924237447" />
     <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1593427141184">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -151,30 +159,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593427381590" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1593427154323">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1594318866914">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594318866914" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154323" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1593427154322">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1594318866913">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594318866913" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1593427154321">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1594318866912">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594318866912" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154321" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1593427154322">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.720@0.23.1280.720" timestamp="1593813705100" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1594318866913">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594318866913" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
     <state x="776" y="231" key="RollbackChangesDialog" timestamp="1592726231768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="231" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592726231768" />
+    <state x="128" y="0" key="SettingsEditor" timestamp="1594138507955">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="128" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1594138507955" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1594147910585">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1594147910585" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592828845844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592828845844" />
+    <state x="620" y="36" width="598" height="735" key="find.popup" timestamp="1594147391802">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="620" y="36" width="598" height="735" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1594147391802" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1593079909993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

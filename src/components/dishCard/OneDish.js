@@ -1,5 +1,6 @@
 import React from "react";
 
+import Favorite from './favorites/favorite';
 import Like from './likes/like'
 import AddComment from "./comments/addComment/addComment";
 import Comments from './comments/comments'
@@ -19,6 +20,7 @@ const OneDish = (props) => {
                 <span><strong>Cost</strong>: {props.dish.cost}grn</span>
             </div>
             <div className={s.like_comment}>
+                <Favorite dish={props.dish} dispatch={props.dispatch} />
                 <Like dish={props.dish} dispatch={props.dispatch} />
                 <AddComment user={props.user} dish={props.dish} dispatch={props.dispatch}/>
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 import s from './like.module.css'
-import {addLikeActionCreator} from "../../../redux/store";
+import {addLikeActionCreator} from "../../../redux/dish-reducer";
 
 
 

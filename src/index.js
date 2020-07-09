@@ -7,7 +7,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 
-
 export let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
@@ -20,10 +19,6 @@ export let rerenderEntireTree = (state) => {
 rerenderEntireTree(store.getState());
 
 store.subscribe(rerenderEntireTree);
-
-
-
-
 
 
 // If you want your app to work offline and load faster, you can change
