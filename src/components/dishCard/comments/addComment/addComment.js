@@ -16,9 +16,18 @@ const AddComment = (props) =>{
 
     let buttonAddComment = () => props.dispatch(addCommentActionCreator(props));
 
+    let newCommentTextValue = () => {
+        let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
+        if (newCommentTextObject) {
+            return  newCommentTextObject.value
+        } else {
+            return "";
+        }
+    }
+
     return (
         <div>
-            <input type="text" ref={newCommentElement} onChange={readNewCommentText} value={props.dish.newCommentText}/>
+            <input type="text" ref={newCommentElement} onChange={readNewCommentText} value={newCommentTextValue()}/>
             <button onClick={buttonAddComment}>Add comment</button>
         </div>
     )

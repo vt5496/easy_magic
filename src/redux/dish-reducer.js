@@ -5,7 +5,7 @@ const dishReducer = (state, action) => {
                 state.user.favorites.push(action.idDish)
                 console.log('ADD FAV')
             } else {
-                state.user.favorites.splice(state.user.favorites.indexOf(action.idDish, 1))
+                state.user.favorites.splice(state.user.favorites.indexOf(action.idDish))
                 console.log('DELETE FAV')
             }
             break;
@@ -14,25 +14,37 @@ const dishReducer = (state, action) => {
             if (state.user.likes.includes(action.idDish) === false) {
                 state.user.likes.push(action.idDish)
                 state.catalog[action.idDish].likes++;
-                debugger;
             } else {
-                state.user.likes.splice(state.user.likes.indexOf(action.idDish, 1))
+                state.user.likes.splice(state.user.likes.indexOf(action.idDish))
                 state.catalog[action.idDish].likes--;
             }
             break;
 
         case 'NEW-COMMENT-TEXT':
-            state.catalog[action.idDish].newCommentText = action.newCommentText;
+            let userNewTextObject = state.user.newCommentText.find(dish => dish.idDish === action.idDish);
+            if (userNewTextObject) {
+                userNewTextObject.value = action.newCommentText;
+            } else {
+                state.user.newCommentText.push({
+                    idDish: action.idDish,
+                    value: action.newCommentText
+                })
+            }
             break;
         case 'ADD-COMMENT':
-            state.catalog[action.idDish].comments.push({id: action.userId, value: action.comment});
-            state.catalog[action.idDish].newCommentText = '';
+            state.catalog[action.idDish].comments.push({
+                idUser: action.idUser,
+                idComment: action.idComment,
+                value: action.value
+            });
+            state.user.newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = '';
             break;
         default:
-            alert('I can`t find this type!')
+            return state;
     }
     return state;
 }
+
 
 export const addFavActionCreator = props => ({
     type: 'ADD-FAV',
@@ -45,16 +57,30 @@ export const addLikeActionCreator = props => ({
     like: props.dish.like
 });
 
-export const addCommentActionCreator = props => ({
-    type: 'ADD-COMMENT',
-    idDish: props.dish.id,
-    userId: props.user.id,
-    comment: props.dish.newCommentText
-});
+
 export const readNewCommentTextActionCreator = (props, text) => ({
     type: 'NEW-COMMENT-TEXT',
-    idDish: props.dish.id,
+    idDish: props.dish.idDish,
     newCommentText: text
 });
+export const addCommentActionCreator = props => {
+    let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
+    debugger;
+    if (newCommentTextObject) {
+        if (newCommentTextObject.value.trim()) {
+            return ({
+                type: 'ADD-COMMENT',
+                idDish: props.dish.idDish,
+                idUser: props.user.idUser,
+                idComment: props.dish.comments.length,
+                value: newCommentTextObject.value
+            })
+        } else {
+            return ({type: 'undefined'})
+        }
+    } else {
+        return ({type: 'undefined'})
+    }
+};
 
 export default dishReducer;

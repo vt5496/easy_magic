@@ -6,7 +6,6 @@ import News from "./news/news";
 import Sale from "./sale/sale";
 
 import s from './home.module.css'
-import OneDish from "../dishCard/OneDish";
 
 const Home = (props) => {
     return (

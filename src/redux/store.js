@@ -18,12 +18,10 @@ let store = {
                 likes: 0,
                 comments: [
                     {
-                        user_id: 1,
-                        value: 'Nice Pizza',
-                    },
-                    {
-                        user_id: 1,
-                        value: 'Good job'
+                        idUser: 0,
+                        idComment: 0,
+                        date: '08.08.2020',
+                        value: 'FirstComment'
                     }
                 ],
                 get lengthCom(){
@@ -41,12 +39,7 @@ let store = {
                 description: '',
                 fav: 0,
                 likes: 0,
-                comments: [
-                    {
-                        user_id: 1,
-                        value: 'Nice Pizza',
-                    }
-                ],
+                comments: [],
                 get lengthCom(){
                     return this.comments.length;
                 },
@@ -62,12 +55,7 @@ let store = {
                 description: '',
                 fav: 0,
                 likes: 0,
-                comments: [
-                    {
-                        user_id: 1,
-                        value: 'Nice Pizza',
-                    }
-                ],
+                comments: [],
                 get lengthCom(){
                     return this.comments.length;
                 },
@@ -83,12 +71,7 @@ let store = {
                 description: '',
                 fav: 0,
                 likes: 0,
-                comments: [
-                    {
-                        user_id: 1,
-                        value: 'Nice Pizza',
-                    }
-                ],
+                comments: [],
                 get lengthCom(){
                     return this.comments.length;
                 },
@@ -104,12 +87,7 @@ let store = {
                 description: '',
                 fav: 0,
                 likes: 0,
-                comments: [
-                    {
-                        user_id: 1,
-                        value: 'Nice Pizza',
-                    }
-                ],
+                comments: [],
                 get lengthCom(){
                     return this.comments.length;
                 },
@@ -125,12 +103,7 @@ let store = {
                 description: '',
                 fav: 0,
                 likes: 0,
-                comments: [
-                    {
-                        user_id: 1,
-                        value: 'Nice Pizza',
-                    }
-                ],
+                comments: [],
                 get lengthCom(){
                     return this.comments.length;
                 },
@@ -159,7 +132,7 @@ let store = {
         ],
         users: [
             {
-                idUser: 1,
+                idUser: 0,
                 name: "Vlad",
                 surname: "Tkachenko",
                 number: 380635638793,
@@ -172,7 +145,7 @@ let store = {
                 popularityDishs: [],
                 offers: []},
             {
-                idUser: 2,
+                idUser: 1,
                 name: "Vlad",
                 surname: "Tkachenko",
                 number: 380635638793,
@@ -186,7 +159,7 @@ let store = {
                 offers: []
             },
             {
-                idUser: 3,
+                idUser: 2,
                 name: "Vlad",
                 surname: "Tkachenko",
                 number: 380635638793,
@@ -201,13 +174,21 @@ let store = {
             }
         ],
         user: {
-            idUser: 1,
+            idUser: 0,
             name: "Vlad",
             surname: "Tkachenko",
             number: 380635638793,
             img: "https://scontent.fiev25-2.fna.fbcdn.net/v/t1.0-9/104180479_2991544977600183_335949495529035300_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=11gcT-2cyd0AX-CCJX4&_nc_ht=scontent.fiev25-2.fna&oh=1fcdd51aa051373ed3b104a3360e3350&oe=5F13820B",
             favorites: [],
-            comments: [],
+            comments: [
+
+            ],
+            newCommentText: [
+                {
+                    idDish: 0,
+                    value: 'Hello'
+                },
+            ],
             likes: [],
             settings: [],
             historyOders: [],
@@ -233,7 +214,6 @@ let store = {
     dispatch(action) {
 
         this._state = dishReducer(this._state, action);
-        this._state = searchReducer(this._state, action)
         this._callSubscriber(this._state);
     }
 };

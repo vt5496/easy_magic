@@ -19,23 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/favorites/favorite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishCard/favorites/favorite.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/dish-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/search-reducer.js" afterDir="false" />
+    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT">
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dishCard/likes/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/likes/like.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favorites/favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favorites/favorites.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dish-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dish-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,8 +110,17 @@
       <workItem from="1592725890552" duration="10802000" />
       <workItem from="1592828829236" duration="43235000" />
       <workItem from="1593428559560" duration="6921000" />
-      <workItem from="1593859325060" duration="10503000" />
+      <workItem from="1593859325060" duration="11737000" />
+      <workItem from="1594395775186" duration="9808000" />
     </task>
+    <task id="LOCAL-00001" summary="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT">
+      <created>1594322646528</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594322646528</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,10 +138,15 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Deployment" timestamp="1593427116011">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="368" y="131" key="#Deployment" timestamp="1594322978767">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state x="368" y="131" key="#Deployment/0.0.1280.800@0.0.1280.800" timestamp="1594322978767" />
     <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1593427116011" />
     <state x="723" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592843111495">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -159,33 +165,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593427381590" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1594318866914">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1594403966829">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594318866914" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594403966829" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154323" />
     <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1594318866913">
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1594403966828">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594318866913" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594403966828" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
     <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1594318866912">
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1594403966827">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594318866912" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594403966827" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154321" />
     <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.720@0.23.1280.720" timestamp="1593813705100" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1594318866913">
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1594403966829">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594318866913" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594403966829" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state x="776" y="231" key="RollbackChangesDialog" timestamp="1592726231768">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="517" y="178" key="RollbackChangesDialog" timestamp="1594323701103">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state x="517" y="178" key="RollbackChangesDialog/0.0.1280.800@0.0.1280.800" timestamp="1594323701103" />
     <state x="776" y="231" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592726231768" />
     <state x="128" y="0" key="SettingsEditor" timestamp="1594138507955">
       <screen x="0" y="0" width="1280" height="800" />
@@ -195,14 +202,34 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1594147910585" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1594323689986">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1594323689986" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592828845844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592828845844" />
+    <state x="428" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594323660910">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="428" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1594323660910" />
     <state x="620" y="36" width="598" height="735" key="find.popup" timestamp="1594147391802">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="620" y="36" width="598" height="735" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1594147391802" />
+    <state x="405" y="195" key="git4idea.merge.GitMergeDialog" timestamp="1594323463904">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="405" y="195" key="git4idea.merge.GitMergeDialog/0.0.1280.800@0.0.1280.800" timestamp="1594323463904" />
+    <state x="432" y="268" key="git4idea.rebase.GitRebaseDialog" timestamp="1594323752235">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="432" y="268" key="git4idea.rebase.GitRebaseDialog/0.0.1280.800@0.0.1280.800" timestamp="1594323752235" />
+    <state x="438" y="296" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1594323718294">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="438" y="296" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.800@0.0.1280.800" timestamp="1594323718294" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1593079909993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -211,5 +238,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593427486114" />
+    <state x="478" y="198" key="svn.repositoryBrowser" timestamp="1594323581574">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="478" y="198" key="svn.repositoryBrowser/0.0.1280.800@0.0.1280.800" timestamp="1594323581574" />
   </component>
 </project>
