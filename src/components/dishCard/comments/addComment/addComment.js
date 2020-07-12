@@ -1,9 +1,8 @@
 import React from "react";
 
-import s from './addComment.module.css';
 import {addCommentActionCreator, readNewCommentTextActionCreator} from "../../../../redux/dish-reducer";
 
-const AddComment = (props) =>{
+const AddComment = (props) => {
 
     let newCommentElement = React.createRef();
     let readNewCommentText = () => {
@@ -11,12 +10,12 @@ const AddComment = (props) =>{
         props.dispatch(readNewCommentTextActionCreator(props, text));
     };
 
-    let buttonAddComment = () => props.dispatch(addCommentActionCreator(props));
+    let buttonAddComment = (event) => {event.preventDefault(); return props.dispatch(addCommentActionCreator(props))};
 
     let newCommentTextValue = () => {
         let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
         if (newCommentTextObject) {
-            return  newCommentTextObject.value
+            return newCommentTextObject.value
         } else {
             return "";
         }
@@ -24,8 +23,10 @@ const AddComment = (props) =>{
 
     return (
         <div>
-            <input type="text" ref={newCommentElement} onChange={readNewCommentText} value={newCommentTextValue()}/>
-            <button onClick={buttonAddComment}>Add comment</button>
+            <form action="">
+                <input type="text" ref={newCommentElement} onChange={readNewCommentText} value={newCommentTextValue()}/>
+                <button onClick={buttonAddComment}>Comment</button>
+            </form>
         </div>
     )
 };

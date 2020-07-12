@@ -22,18 +22,25 @@ const Authorization = (props) => {
     };
     let newPasswordTextValue = props.authorization.password;
 
-    let authorizationButton = () => props.dispatch(authorizationActionCreator(props))
+    let authorizationButton = (event) => {event.preventDefault(); return props.dispatch(authorizationActionCreator(props))}
 
 
     return (
         <div className={s.main}>
-            <span>Login</span>
-            <input ref={newLoginElement} onChange={readNewLoginText} type="text" value={newLoginTextValue}/>
+            <form className={s.form} action="">
+                <h2>Authorization</h2>
 
-            <span>Password</span>
-            <input ref={newPasswordElement} onChange={readNewPasswordText} type="password" value={newPasswordTextValue}/>
+                <span>Login</span>
+                <input ref={newLoginElement} onChange={readNewLoginText} type="text" value={newLoginTextValue}/>
 
-            <NavLink exact to="/home"><button onClick={authorizationButton}>Sign in</button></NavLink>
+                <span>Password</span>
+                <input ref={newPasswordElement} onChange={readNewPasswordText} type="password"
+                       value={newPasswordTextValue}/>
+
+
+                    <button onClick={authorizationButton}><NavLink className={s.link} exact to="/home">Sign in</NavLink></button>
+
+            </form>
         </div>
     )
 }

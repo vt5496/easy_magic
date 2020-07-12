@@ -1,7 +1,9 @@
 .Dish{
+    position: relative;
     padding: 20px;
     margin: 20px;
-    border: 5px solid black;
+    border: 3px solid rosybrown;
+    border-radius: 15px;
     max-width: 500px;
 }
 .main {
@@ -19,6 +21,12 @@
     font-family: sans-serif;
     padding-bottom: 10px;
 }
+.favorite{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+}
 
 .properties{
     display: flex;
@@ -26,13 +34,13 @@
     align-items: flex-start;
 }
 
-.like_comment{
+.like_share{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.like_comment>div{
+.like_share>div{
     margin: 10px 20px;
 }
 .comments>div{
@@ -40,5 +48,24 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.addComment input, button{
+    margin: 5px;
+    padding: 2px;
+    background-color: white;
+    border: 1px solid #131313;
+    border-radius: 5px;
+}
+.addComment {
+    display: flex;
+    flex-direction: column;
+}
+
+.userMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 

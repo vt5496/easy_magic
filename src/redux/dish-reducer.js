@@ -3,10 +3,11 @@ const dishReducer = (state, action) => {
         case 'ADD-FAV':
             if (state.user.favorites.includes(action.idDish) === false) {
                 state.user.favorites.push(action.idDish)
-                console.log('ADD FAV')
+                state.catalog[action.idDish].fav++;
             } else {
                 state.user.favorites.splice(state.user.favorites.indexOf(action.idDish))
                 console.log('DELETE FAV')
+                state.catalog[action.idDish].fav--;
             }
             break;
 
@@ -53,10 +54,10 @@ export const addFavActionCreator = props => ({
     idDish: props.dish.idDish
 })
 
-export const addLikeActionCreator = props => ({
+export const addLikeActionCreator = (props) => ({
     type: 'ADD-LIKE',
     idDish: props.dish.idDish,
-    like: props.dish.like
+    like: props.dish.like,
 });
 
 
@@ -67,7 +68,6 @@ export const readNewCommentTextActionCreator = (props, text) => ({
 });
 export const addCommentActionCreator = props => {
     let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
-    debugger;
     if (newCommentTextObject) {
         if (newCommentTextObject.value.trim()) {
             return ({

@@ -1,6 +1,10 @@
+import like from '../img/heart.svg';
+import likeO from '../img/heart-o.svg';
+import favorite from '../img/star-o.svg';
+import favoriteO from '../img/star.svg';
+
 
 import dishReducer from "./dish-reducer";
-import searchReducer from "./search-reducer";
 import authorizationReducer from "./authorization-reducer";
 import registrationReducer from './registration-reducer';
 
@@ -189,9 +193,13 @@ let store = {
         ],
         user: {
             idUser: 0,
+            login: 'vt5496',
             name: "Vlad",
             surname: "Tkachenko",
             number: 380635638793,
+            get fullName () {
+                return `${this.name} ${this.surname}`
+            },
             img: "https://scontent.fiev25-2.fna.fbcdn.net/v/t1.0-9/104180479_2991544977600183_335949495529035300_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=11gcT-2cyd0AX-CCJX4&_nc_ht=scontent.fiev25-2.fna&oh=1fcdd51aa051373ed3b104a3360e3350&oe=5F13820B",
             favorites: [],
             comments: [],
@@ -201,6 +209,13 @@ let store = {
             historyOders: [],
             popularityDishs: [],
             offers: []
+        },
+
+        img: {
+            like1: like,
+            likeO: likeO,
+            favorite1: favorite,
+            favoriteO: favoriteO,
         },
 
         newUser: [
