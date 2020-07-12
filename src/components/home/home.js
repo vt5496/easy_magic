@@ -10,9 +10,9 @@ import s from './home.module.css'
 const Home = (props) => {
     return (
         <div className={s.main}>
-            <h1>Добро пожаловать {props.user.name}</h1>
-            <img src={props.user.img} alt=""/>
-            <Catalog user={props.user} catalog={props.catalog} dispatch={props.dispatch}/>
+            <h1>Добро пожаловать {props.state.user.name}</h1>
+            <img src={props.state.user.img} alt=""/>
+            <Catalog state={props.state} dispatch={props.dispatch}/>
         </div>
     )
 }

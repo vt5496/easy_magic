@@ -25,7 +25,7 @@ const OneDish = (props) => {
                 <AddComment user={props.user} dish={props.dish} dispatch={props.dispatch}/>
             </div>
             <div className={s.comments}>
-                <Comments user={props.user} dish={props.dish}/>
+                <Comments user={props.user} users={props.users} dish={props.dish}/>
             </div>
         </div>
     )

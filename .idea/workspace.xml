@@ -19,14 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT">
-      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.module.css" afterDir="false" />
+    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="Update comment technology, create components of registration and authorization.">
+      <change afterPath="$PROJECT_DIR$/src/redux/authorization-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/registration-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorization/authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorization/authorization.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/authorization.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/OneDish.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/comments/addComment/addComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dishCard/comments/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/comments/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dishCard/comments/oneComment/oneComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/comments/oneComment/oneComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favorites/favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favorites/favorites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/catalog/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/catalog/catalog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/registration.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dish-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dish-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
@@ -111,7 +121,7 @@
       <workItem from="1592828829236" duration="43235000" />
       <workItem from="1593428559560" duration="6921000" />
       <workItem from="1593859325060" duration="11737000" />
-      <workItem from="1594395775186" duration="9808000" />
+      <workItem from="1594395775186" duration="25436000" />
     </task>
     <task id="LOCAL-00001" summary="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT">
       <created>1594322646528</created>
@@ -120,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594322646528</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update comment technology, create components of registration and authorization.">
+      <created>1594413556074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594413556075</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +157,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT" />
+    <MESSAGE value="Update comment technology, create components of registration and authorization." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update comment technology, create components of registration and authorization." />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="131" key="#Deployment" timestamp="1594322978767">
@@ -165,28 +183,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593427381590" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1594403966829">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1594485880038">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594403966829" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594485880038" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154323" />
     <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1594403966828">
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1594485880037">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594403966828" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594485880037" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
     <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1594403966827">
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1594485880036">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594403966827" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594485880036" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154321" />
     <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.720@0.23.1280.720" timestamp="1593813705100" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1594403966829">
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1594485880037">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594403966829" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594485880037" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
     <state x="517" y="178" key="RollbackChangesDialog" timestamp="1594323701103">

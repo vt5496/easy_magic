@@ -39,9 +39,11 @@ const dishReducer = (state, action) => {
             });
             state.user.newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = '';
             break;
+
         default:
             return state;
     }
+
     return state;
 }
 

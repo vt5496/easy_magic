@@ -3,9 +3,6 @@ import React from "react";
 import s from './addComment.module.css';
 import {addCommentActionCreator, readNewCommentTextActionCreator} from "../../../../redux/dish-reducer";
 
-
-
-
 const AddComment = (props) =>{
 
     let newCommentElement = React.createRef();

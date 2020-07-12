@@ -1,6 +1,8 @@
 
 import dishReducer from "./dish-reducer";
 import searchReducer from "./search-reducer";
+import authorizationReducer from "./authorization-reducer";
+import registrationReducer from './registration-reducer';
 
 let store = {
     _state: {
@@ -110,6 +112,7 @@ let store = {
                 rating: ''
             }
         ],
+
         oders: [
             {
                 date: 'date',
@@ -130,28 +133,36 @@ let store = {
                 rating: 231
             }
         ],
+
         users: [
             {
                 idUser: 0,
+                login: 'vt5496',
+                password: 'vt5496',
                 name: "Vlad",
                 surname: "Tkachenko",
                 number: 380635638793,
                 img: "https://scontent.fiev25-2.fna.fbcdn.net/v/t1.0-9/104180479_2991544977600183_335949495529035300_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=11gcT-2cyd0AX-CCJX4&_nc_ht=scontent.fiev25-2.fna&oh=1fcdd51aa051373ed3b104a3360e3350&oe=5F13820B",
                 favorites: [],
                 comments: [],
+                newCommentText: [],
                 likes: [],
                 settings: [],
                 historyOders: [],
                 popularityDishs: [],
-                offers: []},
+                offers: []
+            },
             {
                 idUser: 1,
+                login: 'skyline.vp',
+                password: 'skyline.vp',
                 name: "Vlad",
-                surname: "Tkachenko",
-                number: 380635638793,
+                surname: "Polishuk",
+                number: 380930600236,
                 img: "https://scontent.fiev25-2.fna.fbcdn.net/v/t1.0-9/104180479_2991544977600183_335949495529035300_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=11gcT-2cyd0AX-CCJX4&_nc_ht=scontent.fiev25-2.fna&oh=1fcdd51aa051373ed3b104a3360e3350&oe=5F13820B",
                 favorites: [],
                 comments: [],
+                newCommentText: [],
                 likes: [],
                 settings: [],
                 historyOders: [],
@@ -160,12 +171,15 @@ let store = {
             },
             {
                 idUser: 2,
-                name: "Vlad",
-                surname: "Tkachenko",
-                number: 380635638793,
-                img: "https://scontent.fiev25-2.fna.fbcdn.net/v/t1.0-9/104180479_2991544977600183_335949495529035300_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=11gcT-2cyd0AX-CCJX4&_nc_ht=scontent.fiev25-2.fna&oh=1fcdd51aa051373ed3b104a3360e3350&oe=5F13820B",
+                login: 'yura_ne_dura',
+                password: 'yura_ne_dura',
+                name: "Yura",
+                surname: "Platonov",
+                number: 380950629249,
+                img: "https://instagram.fiev25-1.fna.fbcdn.net/v/t51.2885-19/s320x320/84434529_211320930266070_2314518529619001344_n.jpg?_nc_ht=instagram.fiev25-1.fna.fbcdn.net&_nc_ohc=XdDyvIEKVQMAX_GTAW1&oh=a47add67600fdbdd9f38fb675bc10b51&oe=5F329DCC",
                 favorites: [],
                 comments: [],
+                newCommentText: [],
                 likes: [],
                 settings: [],
                 historyOders: [],
@@ -180,15 +194,8 @@ let store = {
             number: 380635638793,
             img: "https://scontent.fiev25-2.fna.fbcdn.net/v/t1.0-9/104180479_2991544977600183_335949495529035300_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=11gcT-2cyd0AX-CCJX4&_nc_ht=scontent.fiev25-2.fna&oh=1fcdd51aa051373ed3b104a3360e3350&oe=5F13820B",
             favorites: [],
-            comments: [
-
-            ],
-            newCommentText: [
-                {
-                    idDish: 0,
-                    value: 'Hello'
-                },
-            ],
+            comments: [],
+            newCommentText: [],
             likes: [],
             settings: [],
             historyOders: [],
@@ -196,10 +203,22 @@ let store = {
             offers: []
         },
 
-        finder: {
-            text: '',
-            elements: []
-        }
+        newUser: [
+            {
+                login: '',
+                password: ''
+            },
+            {
+                name: '',
+                surname: '',
+                email: '',
+                number: '',
+                img: '',
+                login: '',
+                password: '',
+
+            }
+        ]
     },
     _callSubscriber() {
     },
@@ -212,7 +231,8 @@ let store = {
     },
 
     dispatch(action) {
-
+        this._state = authorizationReducer(this._state, action)
+        this._state = registrationReducer(this._state, action)
         this._state = dishReducer(this._state, action);
         this._callSubscriber(this._state);
     }
