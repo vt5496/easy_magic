@@ -1,8 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
 .main{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 500px;
+}
+
+.link{
+    color: white;
 }
 .head{
     display: flex;
@@ -18,20 +29,114 @@
     align-items: center;
 }
 .title>h1{
-    font-size: 20px;
+    font-size: 30px;
     font-family: sans-serif;
     font-weight: bold;
 }
 .title>h2{
-    font-size: 15px;
+    font-size: 20px;
     color: #656564;
     font-family: sans-serif;
     font-weight: bold;
     margin-top: 5px;
 }
 .head>img{
-    width: 80px;
+    width: 100px;
     border-radius: 50%;
     margin: 20px;
     border: 2px solid #b40090;
+}
+
+.quote{
+    margin: 0 0 30px 0;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.newDish{
+    width: 90%;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(251,63,220,1) 21%, rgba(27,0,255,1) 100%);
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.newDish:hover{
+    transition: 50ms;
+    color: #efeeea;
+}
+
+
+.sales{
+    width: 90%;
+    border: 2px solid red;
+    margin: 10px 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #b466a6;
+}
+.arrLeft{
+    position: absolute;
+    left: 5px;
+    width: 60px;
+    filter: invert(1);
+}
+.arrRight{
+    position: absolute;
+    right: 5px;
+    width: 60px;
+    filter: invert(1);
+}
+
+.catalog{
+    width: 90%;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0,20,250,1) 20%, rgba(255,254,0,1) 100%);
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.catalog:hover{
+    transition: 50ms;
+    color: #efeeea;
+}
+
+.exclusive{
+    width: 90%;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgb(255, 0, 71) 21%, rgba(27,0,255,1) 100%);
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.exclusive:hover{
+    transition: 50ms;
+    color: #efeeea;
 }

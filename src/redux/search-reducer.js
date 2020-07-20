@@ -1,4 +1,8 @@
-const searchReducer = (state, action) => {
+let initialState = {
+
+}
+
+const searchReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'NEW-FINDER-TEXT':
             state.finder.text = action.newFindText;
@@ -11,7 +15,7 @@ const searchReducer = (state, action) => {
 
 }
 
-export const readNewFindTextActionCreator = text => ({type: 'NEW-FINDER-TEXT', newFindText: text});
+export const readNewSearchTextActionCreator = text => ({type: 'NEW-FINDER-TEXT', newFindText: text});
 export const findResultActionCreator = findList => ({type: 'FIND-RESULT', findResult: findList})
 
 

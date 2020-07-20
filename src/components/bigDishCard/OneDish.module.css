@@ -21,12 +21,7 @@
     font-family: sans-serif;
     padding-bottom: 10px;
 }
-.favorite{
-    position: absolute;
-    right: 20px;
-    top: 20px;
 
-}
 
 .properties{
     display: flex;

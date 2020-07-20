@@ -1,26 +1,23 @@
-import React from "react";
+let initialState = {
+    login: '',
+    password: ''
+};
 
-const authorizationReducer = (state, action) => {
+const authorizationReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'NEW-LOGIN-TEXT':
-            state.newUser[0].login = action.text;
+            state.login = action.text;
             break;
         case 'NEW-PASSWORD-TEXT':
-            state.newUser[0].password = action.text;
+            state.password = action.text;
             break;
         case 'AUTHORIZATION':
-            if (state.users.find(user => user.login === action.login)) {
-                let user = state.users.find(user => user.login === action.login);
-                if (user.password === action.password){
-                    state.user = user;
-                    state.newUser[0].login='';
-                    state.newUser[0].password=''
-                } else {
-                    alert('Do not real Password!')
-                }
-            } else {
-                alert('User Login not found')
-            }
+                    state.login='';
+                    state.password='';
+            break;
+        case 'FAKE-LOGIN-PASSWORD':
+            alert('User Login or Password is fake');
+            return state;
             break;
         default:
             return state
@@ -38,10 +35,14 @@ export const readNewPasswordTextActionCreator = text => ({
     text: text
 })
 
-export const authorizationActionCreator = props => ({
+export const authorizationActionCreator = (props, user) => ({
     type: 'AUTHORIZATION',
-    login: props.authorization.login,
-    password: props.authorization.password
+    login: props.login,
+    password: props.password,
+    user: user,
+})
+export const fakeAuthorizationActionCreator = () => ({
+    type: 'FAKE-LOGIN-PASSWORD'
 })
 
 export default authorizationReducer;

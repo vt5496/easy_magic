@@ -1,62 +1,55 @@
-import React from "react";
+let initialState = {
+    name: '',
+    surname: '',
+    email: '',
+    number: '',
+    img: '',
+    login: '',
+    password: '',
 
-const RegistrationReducer = (state, action) => {
+};
+
+const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'NEW-NAME-REGISTRATION-TEXT':
-            state.newUser[1].name = action.text;
+            state.name = action.text;
             break;
         case 'NEW-SURNAME-REGISTRATION-TEXT':
-            state.newUser[1].surname = action.text;
+            state.surname = action.text;
             break;
         case 'NEW-EMAIL-REGISTRATION-TEXT':
-            state.newUser[1].email = action.text;
+            state.email = action.text;
             break;
         case 'NEW-NUMBER-REGISTRATION-TEXT':
-            state.newUser[1].number = action.text;
+            state.number = action.text;
             break;
         case 'NEW-IMG-REGISTRATION-TEXT':
-            state.newUser[1].img = action.text;
+            state.img = action.text;
             break;
         case 'NEW-LOGIN-REGISTRATION-TEXT':
-            state.newUser[1].login = action.text;
+            state.login = action.text;
             break;
         case 'NEW-PASSWORD-REGISTRATION-TEXT':
-            state.newUser[1].password = action.text;
+            state.password = action.text;
             break;
         case 'REGISTRATION-NEW-USER':
-            if (action.login && action.password && action.email && action.name && action.surname && action.img && action.number) {
-                state.users.push({
-                    name: action.name,
-                    surname: action.surname,
-                    email: action.email,
-                    number: action.number,
-                    img: action.img,
-                    login: action.login,
-                    password: action.password,
-                    favorites: [],
-                    comments: [],
-                    newCommentText: [],
-                    likes: [],
-                    settings: [],
-                    historyOders: [],
-                    popularityDishs: [],
-                    offers: []
-                })
-                state.newUser[1].name = '';
-                state.newUser[1].surname = '';
-                state.newUser[1].email = '';
-                state.newUser[1].number = '';
-                state.newUser[1].img = '';
-                state.newUser[1].login = '';
-                state.newUser[1].password = '';
-            } else {
-                alert('Not correct data')
-            }
+            state.name = '';
+            state.surname = '';
+            state.email = '';
+            state.number = '';
+            state.img = '';
+            state.login = '';
+            state.password = '';
+            break;
+        case 'FAKE-REGISTRATION-NEW-USER':
+            alert('Not correct data')
+            return state;
         default:
-            return state
+            return state;
     }
     return state
 }
+
 
 export const readNewNameRegistrationTextActionCreator = text => ({
     type: 'NEW-NAME-REGISTRATION-TEXT',
@@ -103,7 +96,9 @@ export const registrationActionCreator = props => ({
     login: props.registration.login,
     password: props.registration.password
 })
+export const fakeRegistrationActionCreator = () => ({
+    type: 'FAKE-REGISTRATION-NEW-USER'
+})
 
 
-
-export default RegistrationReducer;
+export default registrationReducer;

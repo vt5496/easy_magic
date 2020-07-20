@@ -1,26 +1,31 @@
-//import React from "react";
+import React, {createRef} from "react";
 
+import {readNewSearchTextActionCreator} from "../../redux/search-reducer";
+import OneDish from "../bigDishCard/OneDish";
 
-/*
+import s from './search.module.css'
 
-    let buttonLetFind = () =>{
-        let findList = props.catalog.map(dish => {
-            if (dish.name === props.findText) {
-               return dish;
-            }
-        });
-        console.log(findList)
-    };
-    let searchFilter = buttonLetFind();
+const Search = (props) => {
 
+    let newFindElement = React.createRef();
+    let readNewSearchText = () => {
+        let text = newFindElement.current.value;
+        props.dispatch(readNewSearchTextActionCreator(props, text))
+    }
+    let newSearchTextValue = props.state.user.searchText;
 
-    return(
+    let searchFilter = props.state.catalog.map(dish => {
+        if (props.state.user.search.includes(dish.idDish)) {
+            return <OneDish state={props.state} dish={dish} dispatch={props.dispatch}/>
+        }
+
+        return (
         <div className={s.List}>
-            <input type="text" ref={newFindElement} onChange={readNewFindText} value={props.newFindText}/>
-            <button onClick={buttonLetFind}>Let find</button>
+            <input type="text" ref={newFindElement} onChange={readNewSearchText} value={newSearchTextValue}/>
             {searchFilter}
         </div>
-    )
-;
+    );
+})
+}
 
-export default Search;*/
+export default Search;

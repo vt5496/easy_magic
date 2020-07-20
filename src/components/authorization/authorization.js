@@ -1,6 +1,10 @@
 import React from "react";
 
-import {authorizationActionCreator, readNewLoginTextActionCreator} from "../../redux/authorization-reducer";
+import {
+    authorizationActionCreator,
+    fakeAuthorizationActionCreator,
+    readNewLoginTextActionCreator
+} from "../../redux/authorization-reducer";
 import {readNewPasswordTextActionCreator} from "../../redux/authorization-reducer";
 
 import s from './authorization.module.css'
@@ -22,7 +26,20 @@ const Authorization = (props) => {
     };
     let newPasswordTextValue = props.authorization.password;
 
-    let authorizationButton = (event) => {event.preventDefault(); return props.dispatch(authorizationActionCreator(props))}
+    let authorizationButton = (event) => {
+        event.preventDefault();
+        if (props.users.find(user => user.login === props.authorization.login)) {
+            let user = props.users.find(user => user.login === props.authorization.login);
+            if (user.password === props.authorization.password) {
+                return props.dispatch(authorizationActionCreator(props, user))
+            } else {
+                return props.dispatch(fakeAuthorizationActionCreator())
+            }
+        }
+        else {
+            return props.dispatch(fakeAuthorizationActionCreator())
+        }
+    }
 
 
     return (
@@ -38,7 +55,8 @@ const Authorization = (props) => {
                        value={newPasswordTextValue}/>
 
 
-                    <button onClick={authorizationButton}><NavLink className={s.link} exact to="/home">Sign in</NavLink></button>
+                <button onClick={authorizationButton}><NavLink className={s.link} exact to="/home">Sign in</NavLink>
+                </button>
 
             </form>
         </div>

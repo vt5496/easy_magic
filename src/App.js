@@ -14,21 +14,25 @@ import Authorization from "./components/authorization/authorization";
 import Registration from "./components/registration/registration";
 
 
-import s from './App.module.css';
+import s from './app.module.css';
+import Catalog from "./components/home/catalog/catalog";
+
 
 const App = (props) => {
 
     return (
         <BrowserRouter>
-            <div>
+            <div  className={s.container}>
                 <Route path='/home' render={() => <Home state={props.state} dispatch={props.dispatch}/>}/>
                 <Route path='/favorites' render={() => <Favorites state={props.state} dispatch={props.dispatch}/>}/>
                 <Route path='/search' render={() => <Search user={props.state.user} catalog={props.state.catalog} findText={props.state.finder.text} dispatch={props.dispatch}/>}/>
                 <Route path='/shopcart' render={() => <ShoppingCart />}/>
                 <Route path='/profile' render={() => <Profile />}/>
 
-                <Route path='/authorization' render={() => <Authorization users={props.state.users} authorization={props.state.newUser[0]} dispatch={props.dispatch}/>} />
-                <Route path='/registration' render={() => <Registration users={props.state.users} registration={props.state.newUser[1]} dispatch={props.dispatch}/>} />
+                <Route path='/authorization' render={() => <Authorization users={props.state.users} authorization={props.state.authorization} dispatch={props.dispatch}/>} />
+                <Route path='/registration' render={() => <Registration users={props.state.users} registration={props.state.registration} dispatch={props.dispatch}/>} />
+
+                <Route path='/catalog' render={() => <Catalog state={props.state} dispatch={props.dispatch}/>} />
 
                 <Nav />
             </div>

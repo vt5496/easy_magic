@@ -1,13 +1,13 @@
 import React from "react";
 
-import OneDish from "../dishCard/OneDish";
+import OneDish from "../bigDishCard/OneDish";
 
 import s from './favorites.module.css';
 
 
 const Favorites = (props) => {
-    let MainFavFilter = props.state.catalog.map(dish => {
-        if (props.state.user.favorites.includes(dish.idDish)) {
+    let MainLikeFilter = props.state.catalog.map(dish => {
+        if (props.state.user.likes.includes(dish.idDish)) {
             return <OneDish state={props.state} dish={dish} dispatch={props.dispatch}/>
         }
     });
@@ -15,7 +15,7 @@ const Favorites = (props) => {
 
     return (
         <div className={s.List}>
-            {MainFavFilter}
+            {MainLikeFilter}
         </div>
     )
 };

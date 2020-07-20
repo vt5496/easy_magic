@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 
 import s from './registration.module.css'
 import {
+    fakeRegistrationActionCreator,
     readNewEmailRegistrationTextActionCreator,
     readNewImgRegistrationTextActionCreator,
     readNewLoginRegistrationTextActionCreator,
@@ -63,7 +64,14 @@ const Registration = (props) => {
     };
     let newPasswordRegistrationTextValue = props.registration.password;
 
-    let registrationButton = () => props.dispatch(registrationActionCreator(props))
+    let registrationButton = (event) => {
+        event.preventDefault();
+        if (props.registration.login && props.registration.password && props.registration.email && props.registration.name && props.registration.surname && props.registration.img && props.registration.number) {
+        props.dispatch(registrationActionCreator(props))
+    } else {
+            props.dispatch(fakeRegistrationActionCreator())
+        }
+    }
 
     return (
         <div className={s.main}>
