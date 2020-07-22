@@ -4,39 +4,37 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 import Nav from './components/Nav'
 
-import Home from "./components/home/home";
-import Favorites from './components/favorites/favorites';
-import Search from './components/search/search';
-import ShoppingCart from "./components/shoppingCart/shoppingCart";
-import Profile from "./components/profile/profile";
+import Search from './components/search/Search';
+import ShoppingCart from "./components/shoppingCart/ShoppingCart";
+import Profile from "./components/profile/Profile";
 
-import Authorization from "./components/authorization/authorization";
-import Registration from "./components/registration/registration";
+import Authorization from "./components/authorization/Authorization";
+import Registration from "./components/registration/Registration";
 
 
 import s from './app.module.css';
-import Catalog from "./components/home/catalog/catalog";
+
+import CatalogContainer from "./components/home/catalog/CatalogContainer";
+import FavoritesContainer from "./components/favorites/FavoritesContainer";
+import HomeContainer from "./components/home/HomeContainer";
 
 
-const App = (props) => {
-
+const App = () => {
     return (
-        <BrowserRouter>
             <div  className={s.container}>
-                <Route path='/home' render={() => <Home state={props.state} dispatch={props.dispatch}/>}/>
-                <Route path='/favorites' render={() => <Favorites state={props.state} dispatch={props.dispatch}/>}/>
-                <Route path='/search' render={() => <Search user={props.state.user} catalog={props.state.catalog} findText={props.state.finder.text} dispatch={props.dispatch}/>}/>
+                <Route path='/home' render={() => <HomeContainer />}/>
+                <Route path='/favorites' render={() => <FavoritesContainer />}/>
+                <Route path='/search' render={() => <Search />}/>
                 <Route path='/shopcart' render={() => <ShoppingCart />}/>
                 <Route path='/profile' render={() => <Profile />}/>
 
-                <Route path='/authorization' render={() => <Authorization users={props.state.users} authorization={props.state.authorization} dispatch={props.dispatch}/>} />
-                <Route path='/registration' render={() => <Registration users={props.state.users} registration={props.state.registration} dispatch={props.dispatch}/>} />
+                <Route path='/authorization' render={() => <Authorization />} />
+                <Route path='/registration' render={() => <Registration />} />
 
-                <Route path='/catalog' render={() => <Catalog state={props.state} dispatch={props.dispatch}/>} />
+                <Route path='/catalog' render={() => <CatalogContainer />} />
 
                 <Nav />
             </div>
-        </BrowserRouter>
     )
 };
 

@@ -1,12 +1,5 @@
 import React from "react";
 
-import {
-    readNewCommentTextActionCreator,
-    createReadNewCommentTextActionCreator
-} from "../../../../redux/user-reducer";
-import {addCommentActionCreator} from "../../../../redux/catalog-reducer";
-
-
 const AddComment = (props) => {
         let newCommentElement = React.createRef();
         let readNewCommentText = () => {
@@ -14,18 +7,18 @@ const AddComment = (props) => {
             let userNewTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
             console.log(userNewTextObject)
             if (userNewTextObject) {
-                props.dispatch(readNewCommentTextActionCreator(props, text));
+                props.readNewCommentText(text, props.dish);
             } else {
-                props.dispatch(createReadNewCommentTextActionCreator(props, text))
+                props.createReadNewCommentText(text, props.dish)
             }
         };
 
-        let buttonAddComment = (event) => {
+        let onButtonAddComment = (event) => {
             event.preventDefault();
             let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
             if (newCommentTextObject) {
                 if (newCommentTextObject.value.trim()) {
-                    return props.dispatch(addCommentActionCreator(props))
+                    return props.addComment(props, props.dish)
                 } else {
                     return ({type: 'undefined'})
                 }
@@ -48,7 +41,7 @@ const AddComment = (props) => {
                 <form action="">
                     <input type="text" ref={newCommentElement} onChange={readNewCommentText}
                            value={newCommentTextValue()}/>
-                    <button onClick={buttonAddComment}>Comment</button>
+                    <button onClick={onButtonAddComment}>Comment</button>
                 </form>
             </div>
         )

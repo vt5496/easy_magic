@@ -99,7 +99,6 @@ let initialState = [
 ];
 
 const catalogReducer = (state = initialState, action) => {
-
     switch (action.type) {
         case 'ADD-LIKE':
             state[action.idDish].likes++;
@@ -124,21 +123,21 @@ const catalogReducer = (state = initialState, action) => {
 }
 
 
-export const addLikeActionCreator = props => ({
+export const addLikeActionCreator = dish => ({
     type: 'ADD-LIKE',
-    idDish: props.dish.idDish
+    idDish: dish.idDish
 });
-export const removeLikeActionCreator = props => ({
+export const removeLikeActionCreator = dish => ({
     type: 'REMOVE-LIKE',
-    idDish: props.dish.idDish,
+    idDish: dish.idDish,
 });
 
-export const addCommentActionCreator = props => ({
+export const addCommentActionCreator = (props, dish) => ({
     type: 'ADD-COMMENT',
-    idDish: props.dish.idDish,
+    idDish: dish.idDish,
     idUser: props.user.idUser,
-    idComment: props.dish.comments.length,
-    value: props.user.newCommentText[props.dish.idDish].value
+    idComment: dish.comments.length,
+    value: props.user.newCommentText[dish.idDish].value
 });
 
 

@@ -1,11 +1,12 @@
 import React from "react";
 
-import Like from './likes/like'
-import AddComment from "./comments/addComment/addComment";
-import Comments from './comments/comments'
+import Like from './likes/Like'
+import AddComment from "./comments/addComment/AddComment";
+import Comments from './comments/Comments'
 import Share from "./share/share";
 
 import s from './OneDish.module.css';
+import Catalog from "../home/catalog/Catalog";
 
 const OneDish = (props) => {
     return (
@@ -21,15 +22,19 @@ const OneDish = (props) => {
             </div>
             <div className={s.userMenu}>
                 <div className={s.like_share}>
-                    <Share img={props.state.img} />
-                    <Like user={props.state.user} dish={props.dish} img={props.state.img} dispatch={props.dispatch}/>
+                    <Share img={props.img} />
+                    <Like user={props.user} dish={props.dish} imgLike={props.imgLike} img={props.img}
+                          addLike={props.addLike} removeLike={props.removeLike}/>
                 </div>
                 <div className={s.addComment}>
-                    <AddComment user={props.state.user} dish={props.dish} dispatch={props.dispatch}/>
+                    <AddComment user={props.user} dish={props.dish}
+                                readNewCommentText={props.readNewCommentText}
+                                createReadNewCommentText={props.createReadNewCommentText}
+                                addComment={props.addComment} />
                 </div>
             </div>
             <div className={s.comments}>
-                <Comments user={props.state.user} users={props.state.users} dish={props.dish}/>
+                <Comments user={props.user} users={props.users} dish={props.dish}/>
             </div>
         </div>
     )

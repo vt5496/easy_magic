@@ -1,12 +1,12 @@
 import React from "react";
 
-import Catalog from "./catalog/catalog";
+import Catalog from "./catalog/Catalog";
 
 import arrLeft from '../../img/keyboard_arrow_left.svg'
 import arrRight from '../../img/keyboard_arrow_right.svg'
 
 import s from './home.module.css'
-import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 import {NavLink} from "react-router-dom";
 
 const Home = (props) => {
@@ -15,10 +15,10 @@ const Home = (props) => {
             <div className={s.main}>
                 <div className={s.head}>
                     <div className={s.title}>
-                        <h1>Welcome {props.state.user.login}</h1>
-                        <h2>{props.state.user.fullName} </h2>
+                        <h1>Welcome {props.user.login}</h1>
+                        <h2>{props.user.fullName} </h2>
                     </div>
-                    <img src={props.state.user.img} alt=""/>
+                    <img src={props.user.img} alt=""/>
                 </div>
                 <div className={s.quote}>
                     "Just sasat now" by vt5496

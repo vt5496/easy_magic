@@ -1,6 +1,6 @@
 import React from "react";
 
-import OneComment from './oneComment/oneComment';
+import OneComment from './oneComment/OneComment';
 
 import s from './comments.module.css';
 

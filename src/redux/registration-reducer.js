@@ -11,6 +11,7 @@ let initialState = {
 
 const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
+
         case 'NEW-NAME-REGISTRATION-TEXT':
             state.name = action.text;
             break;
@@ -32,6 +33,8 @@ const registrationReducer = (state = initialState, action) => {
         case 'NEW-PASSWORD-REGISTRATION-TEXT':
             state.password = action.text;
             break;
+
+
         case 'REGISTRATION-NEW-USER':
             state.name = '';
             state.surname = '';
@@ -44,6 +47,8 @@ const registrationReducer = (state = initialState, action) => {
         case 'FAKE-REGISTRATION-NEW-USER':
             alert('Not correct data')
             return state;
+
+
         default:
             return state;
     }
@@ -85,6 +90,7 @@ export const readNewPasswordRegistrationTextActionCreator = text => ({
     type: 'NEW-PASSWORD-REGISTRATION-TEXT',
     text: text
 })
+
 
 export const registrationActionCreator = props => ({
     type: 'REGISTRATION-NEW-USER',

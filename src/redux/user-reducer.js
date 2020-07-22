@@ -50,17 +50,17 @@ const userReducer = (state = initialState, action) => {
 }
 
 
-export const readNewCommentTextActionCreator = (props, text) => {
+export const readNewCommentTextActionCreator = (text, dish) => {
     return ({
         type: 'READ-NEW-COMMENT-TEXT',
-        idDish: props.dish.idDish,
+        idDish: dish.idDish,
         newCommentText: text
     })
 };
-export const createReadNewCommentTextActionCreator = (props, text) => {
+export const createReadNewCommentTextActionCreator = (text, dish) => {
     return ({
         type: 'CREATE-READ-NEW-COMMENT-TEXT',
-        idDish: props.dish.idDish,
+        idDish: dish.idDish,
         newCommentText: text
     })
 };

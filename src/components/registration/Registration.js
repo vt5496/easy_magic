@@ -15,6 +15,7 @@ import {
 } from "../../redux/registration-reducer";
 
 const Registration = (props) => {
+
     let newNameRegistrationElement = React.createRef();
     let readNewNameRegistrationText = () => {
         let text = newNameRegistrationElement.current.value;
@@ -67,8 +68,8 @@ const Registration = (props) => {
     let registrationButton = (event) => {
         event.preventDefault();
         if (props.registration.login && props.registration.password && props.registration.email && props.registration.name && props.registration.surname && props.registration.img && props.registration.number) {
-        props.dispatch(registrationActionCreator(props))
-    } else {
+            props.dispatch(registrationActionCreator(props))
+        } else {
             props.dispatch(fakeRegistrationActionCreator())
         }
     }

@@ -35,12 +35,10 @@ const Authorization = (props) => {
             } else {
                 return props.dispatch(fakeAuthorizationActionCreator())
             }
-        }
-        else {
+        } else {
             return props.dispatch(fakeAuthorizationActionCreator())
         }
     }
-
 
     return (
         <div className={s.main}>
