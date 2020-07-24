@@ -11,7 +11,7 @@ let initialState = {
     comments: [],
     newCommentText: [],
     likes: [],
-    searchText: '',
+    finderText: '',
     search: [],
     settings: [],
     historyOders: [],
@@ -20,29 +20,58 @@ let initialState = {
 };
 
 const userReducer = (state = initialState, action) => {
+
+    let newCommentText = state.newCommentText;
     switch (action.type) {
+
         case 'ADD-LIKE':
-            state.likes.push(action.idDish)
-            break;
+            return {
+                ...state,
+                likes: [...state.likes, action.idDish]
+            }
         case 'REMOVE-LIKE':
-            state.likes.splice(state.likes.indexOf(action.idDish))
-            break;
+            let removeLike = [...state.likes]
+            removeLike.splice(state.likes.indexOf(action.idDish))
+            return{
+                ...state,
+                likes: removeLike
+            }
 
         case 'READ-NEW-COMMENT-TEXT':
-            state.newCommentText[action.idDish].value = action.newCommentText;
-            break;
-        case 'CREATE-READ-NEW-COMMENT-TEXT':
-            state.newCommentText.push({
-                idDish: action.idDish,
-                value: action.newCommentText
+            newCommentText.map(commentText => {
+                if (commentText.idDish == action.idDish) {
+                    commentText.value = action.newCommentText
+                }
             })
-            break;
+
+            return {
+                ...state,
+                newCommentText: newCommentText
+
+            }
+        case 'CREATE-READ-NEW-COMMENT-TEXT':
+            return {
+                ...state,
+                newCommentText: [...state.newCommentText, {
+                    idDish: action.idDish,
+                    value: action.newCommentText
+                }]
+            }
         case 'ADD-COMMENT':
-            state.newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = '';
-            break;
+            newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = ''
+            return {
+                ...state,
+                newCommentText: newCommentText
+            }
+
         case 'AUTHORIZATION':
-            state = action.user;
-            break;
+            return action.user
+
+        case 'NEW-FINDER-TEXT':
+            return {
+                ...state,
+                finderText: action.text
+            }
         default:
             return state;
     }
@@ -62,6 +91,14 @@ export const createReadNewCommentTextActionCreator = (text, dish) => {
         type: 'CREATE-READ-NEW-COMMENT-TEXT',
         idDish: dish.idDish,
         newCommentText: text
+    })
+};
+
+
+export const readNewFinderTextActionCreator = (text) => {
+    return ({
+        type: 'NEW-FINDER-TEXT',
+        newFinderText: text
     })
 };
 

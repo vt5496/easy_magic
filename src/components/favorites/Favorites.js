@@ -1,6 +1,6 @@
 import React from "react";
 
-import OneDish from "../bigDishCard/OneDish";
+import OneDish from "../dishCard/bigDishCard/OneDish";
 
 import s from './favorites.module.css';
 import like from "../../img/heart.svg";

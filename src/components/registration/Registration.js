@@ -4,14 +4,14 @@ import {NavLink} from "react-router-dom";
 
 import s from './registration.module.css'
 import {
-    fakeRegistrationActionCreator,
-    readNewEmailRegistrationTextActionCreator,
-    readNewImgRegistrationTextActionCreator,
-    readNewLoginRegistrationTextActionCreator,
-    readNewNameRegistrationTextActionCreator,
-    readNewNumberRegistrationTextActionCreator,
-    readNewPasswordRegistrationTextActionCreator,
-    readNewSurnameRegistrationTextActionCreator, registrationActionCreator
+    fakeRegistration,
+    readNewEmailRegistrationText,
+    readNewImgRegistrationText,
+    readNewLoginRegistrationText,
+    readNewNameRegistrationText,
+    readNewNumberRegistrationText,
+    readNewPasswordRegistrationText,
+    readNewSurnameRegistrationText, registration
 } from "../../redux/registration-reducer";
 
 const Registration = (props) => {
@@ -19,58 +19,58 @@ const Registration = (props) => {
     let newNameRegistrationElement = React.createRef();
     let readNewNameRegistrationText = () => {
         let text = newNameRegistrationElement.current.value;
-        props.dispatch(readNewNameRegistrationTextActionCreator(text));
+        props.readNewNameRegistrationText(text)
     };
     let newNameRegistrationTextValue = props.registration.name;
 
     let newSurnameRegistrationElement = React.createRef();
     let readNewSurnameRegistrationText = () => {
         let text = newSurnameRegistrationElement.current.value;
-        props.dispatch(readNewSurnameRegistrationTextActionCreator(text));
+        props.readNewSurnameRegistrationText(text)
     };
     let newSurnameRegistrationTextValue = props.registration.surname;
 
     let newEmailRegistrationElement = React.createRef();
     let readNewEmailRegistrationText = () => {
         let text = newEmailRegistrationElement.current.value;
-        props.dispatch(readNewEmailRegistrationTextActionCreator(text));
+        props.readNewEmailRegistrationText(text)
     };
     let newEmailRegistrationTextValue = props.registration.email;
 
     let newNumberRegistrationElement = React.createRef();
     let readNewNumberRegistrationText = () => {
         let text = newNumberRegistrationElement.current.value;
-        props.dispatch(readNewNumberRegistrationTextActionCreator(text));
+        props.readNewNumberRegistrationText(text)
     };
     let newNumberRegistrationTextValue = props.registration.number;
 
     let newImgRegistrationElement = React.createRef();
     let readNewImgRegistrationText = () => {
         let text = newImgRegistrationElement.current.value;
-        props.dispatch(readNewImgRegistrationTextActionCreator(text));
+        props.readNewImgRegistrationText(text)
     };
     let newImgRegistrationTextValue = props.registration.img;
 
     let newLoginRegistrationElement = React.createRef();
     let readNewLoginRegistrationText = () => {
         let text = newLoginRegistrationElement.current.value;
-        props.dispatch(readNewLoginRegistrationTextActionCreator(text));
+        props.readNewLoginRegistrationText(text)
     };
     let newLoginRegistrationTextValue = props.registration.login;
 
     let newPasswordRegistrationElement = React.createRef();
     let readNewPasswordRegistrationText = () => {
         let text = newPasswordRegistrationElement.current.value;
-        props.dispatch(readNewPasswordRegistrationTextActionCreator(text));
+        props.readNewPasswordRegistrationText(text)
     };
-    let newPasswordRegistrationTextValue = props.registration.password;
+    let newPasswordRegistrationTextValue = props.password;
 
     let registrationButton = (event) => {
         event.preventDefault();
-        if (props.registration.login && props.registration.password && props.registration.email && props.registration.name && props.registration.surname && props.registration.img && props.registration.number) {
-            props.dispatch(registrationActionCreator(props))
+        if (props.login && props.password && props.email && props.name && props.surname && props.img && props.number) {
+            props.registration(props)
         } else {
-            props.dispatch(fakeRegistrationActionCreator())
+            props.fakeRegistration()
         }
     }
 

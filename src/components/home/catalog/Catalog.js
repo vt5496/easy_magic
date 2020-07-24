@@ -1,14 +1,12 @@
 import React from "react";
 
 import s from './catalog.module.css'
-import OneDish from "../../bigDishCard/OneDish";
-import MiniDish from "../../miniDishCard/MiniDish";
+import OneDish from "../../dishCard/bigDishCard/OneDish";
+import MiniDish from "../../dishCard/miniDishCard/MiniDish";
 import like from "../../../img/heart.svg";
 import likeO from "../../../img/heart-o.svg";
 
 const Catalog = (props) => {
-    debugger;
-
     let imgLike = likeO;
     let dishListt = props.catalog.map(dish => {
         if (props.user.likes.includes(dish.idDish) === true) {
@@ -34,6 +32,8 @@ const Catalog = (props) => {
             addComment={props.addComment}
         />
     });
+
+
     let dishList = props.catalog.map(dish => {
         return <MiniDish
             user={props.user}

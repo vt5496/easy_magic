@@ -19,42 +19,42 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="NEW logic of reducers. Refactor so many code. Осознал много ошибок в коде и поисправлял их.">
-      <change afterPath="$PROJECT_DIR$/src/components/favorites/FavoritesContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/HomeContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/catalog/CatalogContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="Подключил React-Redux, Connect, Contex API.">
+      <change afterPath="$PROJECT_DIR$/src/components/Finder/Finder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/AuthorizationContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/comments/comments.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/registration/RegistrationContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/finder-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/OneDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bigDishCard/OneDish.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/OneDish.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bigDishCard/OneDish.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/addComment/addComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bigDishCard/comments/addComment/AddComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bigDishCard/comments/Comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/oneComment/oneComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bigDishCard/comments/oneComment/OneComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/likes/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bigDishCard/likes/Like.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/favorites/favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favorites/Favorites.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/branded/branded.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/branded/Branded.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/catalog/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/catalog/Catalog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/catalog/catalog.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/catalog/catalog.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/news/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/news/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/sale/sale.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/sale/Sale.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/miniDishCard/miniDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/miniDishCard/MiniDish.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/miniDishCard/miniDish.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/miniDishCard/miniDish.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/registration/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/Registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shoppingCart/shoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shoppingCart/ShoppingCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/OneDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/OneDish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/OneDish.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/OneDish.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/comments/Comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/addComment/AddComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/comments/addComment/AddComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/comments.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Finder/FinderContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/oneComment/OneComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/comments/oneComment/OneComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/comments/oneComment/oneComment.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/comments/oneComment/oneComment.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/likes/Like.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/likes/Like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/likes/like.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/likes/like.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bigDishCard/share/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/bigDishCard/share/share.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/favorites/Favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/favorites/Favorites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/catalog/Catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/catalog/Catalog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/miniDishCard/MiniDish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/miniDishCard/MiniDish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/miniDishCard/miniDish.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishCard/miniDishCard/miniDish.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pizduk/hyin9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pizduk/xuin9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/Registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Finder/Finder.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authorization-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authorization-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/catalog-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/catalog-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/registration-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/registration-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/search-reducer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/user-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/user-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,7 @@
       <workItem from="1594878682180" duration="1558000" />
       <workItem from="1594927024103" duration="1507000" />
       <workItem from="1595163890328" duration="11373000" />
-      <workItem from="1595275194958" duration="11265000" />
+      <workItem from="1595275194958" duration="29064000" />
     </task>
     <task id="LOCAL-00001" summary="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT">
       <created>1594322646528</created>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595275460636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Подключил React-Redux, Connect, Contex API.">
+      <created>1595451420686</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595451420686</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +231,8 @@
     <MESSAGE value="Create registration and authorization." />
     <MESSAGE value="Change design." />
     <MESSAGE value="NEW logic of reducers. Refactor so many code. Осознал много ошибок в коде и поисправлял их." />
-    <option name="LAST_COMMIT_MESSAGE" value="NEW logic of reducers. Refactor so many code. Осознал много ошибок в коде и поисправлял их." />
+    <MESSAGE value="Подключил React-Redux, Connect, Contex API." />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключил React-Redux, Connect, Contex API." />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="131" key="#Deployment" timestamp="1594322978767">
@@ -241,10 +249,10 @@
     </state>
     <state x="482" y="248" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1594741562115" />
     <state x="723" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1592843111495" />
-    <state x="460" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595164724844">
+    <state x="460" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595614328366">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="460" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1595164724844" />
+    <state x="460" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1595614328366" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592924237447" />
     <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1593427141184">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -258,28 +266,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593427381590" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1595445871874">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1595494321920">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1595445871874" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1595494321920" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154323" />
     <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1595445871872">
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1595494321919">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1595445871872" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1595494321919" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
     <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1595445871871">
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1595494321919">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1595445871871" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1595494321919" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154321" />
     <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.720@0.23.1280.720" timestamp="1593813705100" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1595445871873">
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1595494321920">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1595445871873" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1595494321920" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593427154322" />
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.720@0.23.1280.720" timestamp="1593813705101" />
     <state x="517" y="178" key="RollbackChangesDialog" timestamp="1594323701103">
@@ -295,10 +303,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1594147910585" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1595275471467">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1595451422202">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1595275471467" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1595451422202" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592828845844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,10 +315,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="428" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1594323660910" />
-    <state x="641" y="65" width="598" height="735" key="find.popup" timestamp="1595260972676">
+    <state x="641" y="65" width="598" height="735" key="find.popup" timestamp="1595615261205">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="641" y="65" width="598" height="735" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1595260972676" />
+    <state x="641" y="65" width="598" height="735" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1595615261205" />
     <state x="405" y="195" key="git4idea.merge.GitMergeDialog" timestamp="1594323463904">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -332,10 +340,10 @@
     </state>
     <state x="411" y="185" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1594916079130" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593079909993" />
-    <state x="415" y="173" width="670" height="522" key="search.everywhere.popup" timestamp="1595360957039">
+    <state x="415" y="173" width="670" height="522" key="search.everywhere.popup" timestamp="1595542412517">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="415" y="173" width="670" height="522" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1595360957039" />
+    <state x="415" y="173" width="670" height="522" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1595542412517" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593427486114" />
     <state x="478" y="198" key="svn.repositoryBrowser" timestamp="1594323581574">
       <screen x="0" y="0" width="1280" height="800" />

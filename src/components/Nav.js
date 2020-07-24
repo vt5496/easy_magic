@@ -17,7 +17,7 @@ const Nav = (props) => {
             <ul className={s.NavBar}>
                 <li><NavLink exact strict to="/home" activeClassName={s.active}><img src={home} alt="Home"/></NavLink></li>
                 <li><NavLink exact to="/favorites" activeClassName={s.active}><img src={favorites} alt="Favorites"/></NavLink></li>
-                <li><NavLink exact to="/search" activeClassName={s.active}><img src={search} alt="Search"/></NavLink></li>
+                <li><NavLink exact to="/finder" activeClassName={s.active}><img src={search} alt="Search"/></NavLink></li>
                 <li><NavLink exact to="/shopcart" activeClassName={s.active}><img src={shopcart} alt="Catalog"/></NavLink></li>
                 <li><NavLink exact to="/profile" activeClassName={s.active}><img src={profile} alt="Profile"/></NavLink></li>
             </ul>

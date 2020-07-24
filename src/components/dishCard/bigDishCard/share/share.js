@@ -1,6 +1,6 @@
 import React from "react";
 
-import shareImg from '../../../img/share.svg'
+import shareImg from '../../../../img/share.svg'
 
 const Share = (props) => {
 

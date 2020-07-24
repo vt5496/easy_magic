@@ -6,7 +6,7 @@ import Comments from './comments/Comments'
 import Share from "./share/share";
 
 import s from './OneDish.module.css';
-import Catalog from "../home/catalog/Catalog";
+import Catalog from "../../home/catalog/Catalog";
 
 const OneDish = (props) => {
     return (

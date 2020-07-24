@@ -6,19 +6,24 @@ let initialState = {
 const authorizationReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'NEW-LOGIN-TEXT':
-            state.login = action.text;
-            break;
+            return {
+                ...state,
+                login: action.text
+            }
         case 'NEW-PASSWORD-TEXT':
-            state.password = action.text;
-            break;
+            return {
+                ...state,
+                password: action.text
+            }
         case 'AUTHORIZATION':
-                    state.login='';
-                    state.password='';
-            break;
+            return {
+                ...state,
+                login: '',
+                password: ''
+            }
         case 'FAKE-LOGIN-PASSWORD':
             alert('User Login or Password is fake');
             return state;
-            break;
         default:
             return state
     }

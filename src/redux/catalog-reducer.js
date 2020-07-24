@@ -1,4 +1,5 @@
 let initialState = [
+
     {
         idDish: 0,
         name: "Карбонара",
@@ -99,27 +100,38 @@ let initialState = [
 ];
 
 const catalogReducer = (state = initialState, action) => {
+    let newState = [...state];
+
     switch (action.type) {
         case 'ADD-LIKE':
-            state[action.idDish].likes++;
-            break;
+            newState.map(dish => {
+                if (action.idDish == dish.idDish) {
+                    dish.likes++
+                }
+            })
+            return newState
         case 'REMOVE-LIKE':
-            state[action.idDish].likes--;
-            break;
+            newState.map(dish => {
+                if (action.idDish == dish.idDish) {
+                    dish.likes--
+                }
+            })
+            return newState
+
         case 'ADD-COMMENT':
-            state[action.idDish].comments.push({
+             newState[action.idDish].comments.push({
                 idUser: action.idUser,
                 idComment: action.idComment,
                 value: action.value,
                 date: new Date()
             });
-            break;
+            return newState;
 
         default:
-            return state;
+            return newState;
     }
 
-    return state;
+    return newState;
 }
 
 

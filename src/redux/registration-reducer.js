@@ -13,42 +13,55 @@ const registrationReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case 'NEW-NAME-REGISTRATION-TEXT':
-            state.name = action.text;
-            break;
+            return {
+                ...state,
+                name: action.text
+            }
         case 'NEW-SURNAME-REGISTRATION-TEXT':
-            state.surname = action.text;
-            break;
+            return {
+                ...state,
+                surname: action.text
+            }
         case 'NEW-EMAIL-REGISTRATION-TEXT':
-            state.email = action.text;
-            break;
+            return {
+                ...state,
+                email: action.text
+            }
         case 'NEW-NUMBER-REGISTRATION-TEXT':
-            state.number = action.text;
-            break;
+            return {
+                ...state,
+                number: action.text
+            }
         case 'NEW-IMG-REGISTRATION-TEXT':
-            state.img = action.text;
-            break;
+            return {
+                ...state,
+                img: action.text
+            }
         case 'NEW-LOGIN-REGISTRATION-TEXT':
-            state.login = action.text;
-            break;
+            return {
+                ...state,
+                login: action.text
+            }
         case 'NEW-PASSWORD-REGISTRATION-TEXT':
-            state.password = action.text;
-            break;
-
+            return {
+                ...state,
+                password: action.text
+            }
 
         case 'REGISTRATION-NEW-USER':
-            state.name = '';
-            state.surname = '';
-            state.email = '';
-            state.number = '';
-            state.img = '';
-            state.login = '';
-            state.password = '';
-            break;
+            return {
+                ...state,
+                name: '',
+                surname: '',
+                email: '',
+                number: '',
+                img: '',
+                login: '',
+                password: ''
+            }
         case 'FAKE-REGISTRATION-NEW-USER':
             alert('Not correct data')
             return state;
-
-
         default:
             return state;
     }

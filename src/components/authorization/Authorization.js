@@ -15,28 +15,28 @@ const Authorization = (props) => {
     let newLoginElement = React.createRef();
     let readNewLoginText = () => {
         let text = newLoginElement.current.value;
-        props.dispatch(readNewLoginTextActionCreator(text));
+        props.readNewLoginText(text)
     };
-    let newLoginTextValue = props.authorization.login;
+    let newLoginTextValue = props.login;
 
     let newPasswordElement = React.createRef();
     let readNewPasswordText = () => {
         let text = newPasswordElement.current.value;
-        props.dispatch(readNewPasswordTextActionCreator(text));
+        props.readNewPasswordText(text)
     };
-    let newPasswordTextValue = props.authorization.password;
+    let newPasswordTextValue = props.password;
 
     let authorizationButton = (event) => {
         event.preventDefault();
-        if (props.users.find(user => user.login === props.authorization.login)) {
-            let user = props.users.find(user => user.login === props.authorization.login);
-            if (user.password === props.authorization.password) {
-                return props.dispatch(authorizationActionCreator(props, user))
+        if (props.users.find(user => user.login === props.login)) {
+            let user = props.users.find(user => user.login === props.login);
+            if (user.password === props.password) {
+                return props.authorization(props, user)
             } else {
-                return props.dispatch(fakeAuthorizationActionCreator())
+                return props.fakeAuthorization()
             }
         } else {
-            return props.dispatch(fakeAuthorizationActionCreator())
+            return props.fakeAuthorization()
         }
     }
 

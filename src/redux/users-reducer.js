@@ -152,24 +152,24 @@ let initialState = [
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'REGISTRATION-NEW-USER':
-                state.push({
-                    name: action.name,
-                    surname: action.surname,
-                    email: action.email,
-                    number: action.number,
-                    img: action.img,
-                    login: action.login,
-                    password: action.password,
-                    favorites: [],
-                    comments: [],
-                    newCommentText: [],
-                    likes: [],
-                    settings: [],
-                    historyOders: [],
-                    popularityDishs: [],
-                    offers: []
-                });
-                break;
+            let newUser = {
+                name: action.name,
+                surname: action.surname,
+                email: action.email,
+                number: action.number,
+                img: action.img,
+                login: action.login,
+                password: action.password,
+                favorites: [],
+                comments: [],
+                newCommentText: [],
+                likes: [],
+                settings: [],
+                historyOders: [],
+                popularityDishs: [],
+                offers: []
+            }
+            return [...state, newUser]
         default:
             return state
     }
