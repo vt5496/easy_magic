@@ -1,8 +1,8 @@
 import React from "react";
 import {connect} from "react-redux";
 import Finder from "./Finder";
-import {finderDishsActionCreator, finderEmptyActionCreator} from "../../redux/finder-reducer";
-import {readNewFinderTextActionCreator} from "../../redux/user-reducer";
+import {finderDishsAC, finderEmptyAC} from "../../redux/finder-reducer";
+import {readNewFinderTextAC} from "../../redux/user-reducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -16,9 +16,9 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        readNewFinderText: (text) => dispatch(readNewFinderTextActionCreator(text)),
-        finderDishs: (dish) => dispatch(finderDishsActionCreator(dish)),
-        emptyFinder: () => dispatch(finderEmptyActionCreator())
+        readNewFinderText: (text) => dispatch(readNewFinderTextAC(text)),
+        finderDishs: (dish) => dispatch(finderDishsAC(dish)),
+        emptyFinder: () => dispatch(finderEmptyAC())
     }
 }
 

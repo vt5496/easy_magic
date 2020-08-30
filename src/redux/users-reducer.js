@@ -149,17 +149,18 @@ let initialState = [
     }
 ];
 
-const usersReducer = (state = initialState, action) => {
-    switch (action.type) {
+const usersReducer = (state = initialState,
+                      {type, name, surname, email, number, img, login, password}) => {
+    switch (type) {
         case 'REGISTRATION-NEW-USER':
             let newUser = {
-                name: action.name,
-                surname: action.surname,
-                email: action.email,
-                number: action.number,
-                img: action.img,
-                login: action.login,
-                password: action.password,
+                name,
+                surname,
+                email,
+                number,
+                img,
+                login,
+                password,
                 favorites: [],
                 comments: [],
                 newCommentText: [],

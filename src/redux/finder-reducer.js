@@ -1,11 +1,11 @@
 let initialState = []
 
-let finderReducer = (state = initialState, action) => {
-    switch (action.type) {
+let finderReducer = (state = initialState, {type, idDish}) => {
+    switch (type) {
         case 'FINDER-EMPTY':
             return []
         case 'FINDER-DISHS':
-            return [...state, action.idDish]
+            return [...state, idDish]
         default:
             return state
     }
@@ -13,14 +13,14 @@ let finderReducer = (state = initialState, action) => {
 }
 
 
-export const finderDishsActionCreator = (dish) => {
+export const finderDishsAC = ({idDish}) => {
     return ({
         type: 'FINDER-DISHS',
-        idDish: dish.idDish
+        idDish
     })
 }
 
-export const finderEmptyActionCreator = () => {
+export const finderEmptyAC = () => {
     return ({
         type: 'FINDER-EMPTY'
     })

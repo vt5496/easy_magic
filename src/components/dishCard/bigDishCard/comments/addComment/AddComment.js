@@ -5,41 +5,29 @@ const AddComment = (props) => {
         let readNewCommentText = () => {
             let text = newCommentElement.current.value;
             let userNewTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
-            console.log(userNewTextObject)
-            if (userNewTextObject) {
-                props.readNewCommentText(text, props.dish);
-            } else {
+            userNewTextObject ?
+                props.readNewCommentText(text, props.dish) :
                 props.createReadNewCommentText(text, props.dish)
-            }
         };
 
-        let onButtonAddComment = (event) => {
-            event.preventDefault();
+        let onButtonAddComment = (e) => {
+            e.preventDefault();
             let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
-            if (newCommentTextObject) {
-                if (newCommentTextObject.value.trim()) {
+            if (newCommentTextObject && newCommentTextObject.value.trim()) {
                     return props.addComment(props, props.dish)
-                } else {
-                    return ({type: 'undefined'})
-                }
-            } else {
-                return ({type: 'undefined'})
             }
         };
 
         let newCommentTextValue = () => {
             let newCommentTextObject = props.user.newCommentText.find(dish => dish.idDish === props.dish.idDish);
-            if (newCommentTextObject) {
-                return newCommentTextObject.value
-            } else {
-                return "";
-            }
+            return newCommentTextObject ? newCommentTextObject.value : "";
         }
 
         return (
             <div>
                 <form action="">
-                    <input type="text" ref={newCommentElement} onChange={readNewCommentText}
+                    <input type="text" ref={newCommentElement}
+                           onChange={readNewCommentText}
                            value={newCommentTextValue()}/>
                     <button onClick={onButtonAddComment}>Comment</button>
                 </form>

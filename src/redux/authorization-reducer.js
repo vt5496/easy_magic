@@ -30,23 +30,23 @@ const authorizationReducer = (state = initialState, action) => {
     return state
 }
 
-export const readNewLoginTextActionCreator = text => ({
+export const readNewLoginTextAC = text => ({
     type: 'NEW-LOGIN-TEXT',
-    text: text
+    text
 })
 
-export const readNewPasswordTextActionCreator = text => ({
+export const readNewPasswordTextAC = text => ({
     type: 'NEW-PASSWORD-TEXT',
-    text: text
+    text
 })
 
-export const authorizationActionCreator = (props, user) => ({
+export const authorizationAC = ({login, password}, user) => ({
     type: 'AUTHORIZATION',
-    login: props.login,
-    password: props.password,
-    user: user,
+    login,
+    password,
+    user,
 })
-export const fakeAuthorizationActionCreator = () => ({
+export const fakeAuthorizationAC = () => ({
     type: 'FAKE-LOGIN-PASSWORD'
 })
 

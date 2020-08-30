@@ -2,9 +2,9 @@ import React from "react";
 import {connect} from "react-redux";
 import Authorization from "./Authorization";
 import {
-    authorizationActionCreator, fakeAuthorizationActionCreator,
-    readNewLoginTextActionCreator,
-    readNewPasswordTextActionCreator
+    authorizationAC, fakeAuthorizationAC,
+    readNewLoginTextAC,
+    readNewPasswordTextAC
 } from "../../redux/authorization-reducer";
 
 let mapStateToProps = (state) => {
@@ -17,10 +17,10 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        readNewLoginText: (text) => dispatch(readNewLoginTextActionCreator(text)),
-        readNewPasswordText: (text) => dispatch(readNewPasswordTextActionCreator(text)),
-        authorization: (props, user) => dispatch(authorizationActionCreator(props, user)),
-        fakeAuthorization: () => dispatch(fakeAuthorizationActionCreator())
+        readNewLoginText: (text) => dispatch(readNewLoginTextAC(text)),
+        readNewPasswordText: (text) => dispatch(readNewPasswordTextAC(text)),
+        authorization: (props, user) => dispatch(authorizationAC(props, user)),
+        fakeAuthorization: () => dispatch(fakeAuthorizationAC())
     }
 
 }

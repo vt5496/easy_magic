@@ -21,7 +21,6 @@ let initialState = {
 
 const userReducer = (state = initialState, action) => {
 
-    let newCommentText = state.newCommentText;
     switch (action.type) {
 
         case 'ADD-LIKE':
@@ -32,21 +31,21 @@ const userReducer = (state = initialState, action) => {
         case 'REMOVE-LIKE':
             let removeLike = [...state.likes]
             removeLike.splice(state.likes.indexOf(action.idDish))
-            return{
+            return {
                 ...state,
                 likes: removeLike
             }
 
         case 'READ-NEW-COMMENT-TEXT':
-            newCommentText.map(commentText => {
-                if (commentText.idDish == action.idDish) {
-                    commentText.value = action.newCommentText
-                }
-            })
-
             return {
                 ...state,
-                newCommentText: newCommentText
+                newCommentText: [...state.newCommentText.map(commentObject => {
+                    if (commentObject.idDish === action.idDish) {
+                        debugger;
+                        return {idDish: commentObject.idDish, value: action.newCommentText}
+                    }
+                    return commentObject;
+                })]
 
             }
         case 'CREATE-READ-NEW-COMMENT-TEXT':
@@ -58,10 +57,9 @@ const userReducer = (state = initialState, action) => {
                 }]
             }
         case 'ADD-COMMENT':
-            newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = ''
             return {
                 ...state,
-                newCommentText: newCommentText
+                newCommentText: [...state.newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = '']
             }
 
         case 'AUTHORIZATION':
@@ -79,26 +77,26 @@ const userReducer = (state = initialState, action) => {
 }
 
 
-export const readNewCommentTextActionCreator = (text, dish) => {
+export const readNewCommentTextAC = (newCommentText, {idDish}) => {
     return ({
         type: 'READ-NEW-COMMENT-TEXT',
-        idDish: dish.idDish,
-        newCommentText: text
+        idDish,
+        newCommentText
     })
 };
-export const createReadNewCommentTextActionCreator = (text, dish) => {
+export const createReadNewCommentTextAC = (newCommentText, {idDish}) => {
     return ({
         type: 'CREATE-READ-NEW-COMMENT-TEXT',
-        idDish: dish.idDish,
-        newCommentText: text
+        idDish,
+        newCommentText
     })
 };
 
 
-export const readNewFinderTextActionCreator = (text) => {
+export const readNewFinderTextAC = newFinderText => {
     return ({
         type: 'NEW-FINDER-TEXT',
-        newFinderText: text
+        newFinderText
     })
 };
 

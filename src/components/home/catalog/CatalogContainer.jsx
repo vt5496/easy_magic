@@ -1,8 +1,8 @@
 import React from "react";
 
 import Catalog from "./Catalog";
-import {addCommentActionCreator, addLikeActionCreator, removeLikeActionCreator} from "../../../redux/catalog-reducer";
-import {createReadNewCommentTextActionCreator, readNewCommentTextActionCreator} from "../../../redux/user-reducer";
+import {addCommentAC, addLikeAC, removeLikeAC} from "../../../redux/catalog-reducer";
+import {createReadNewCommentTextAC, readNewCommentTextAC} from "../../../redux/user-reducer";
 import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
@@ -16,13 +16,13 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        addLike: (dish) => dispatch(addLikeActionCreator(dish)),
-        removeLike: (dish) => dispatch(removeLikeActionCreator(dish)),
+        addLike: (dish) => dispatch(addLikeAC(dish)),
+        removeLike: (dish) => dispatch(removeLikeAC(dish)),
 
-        readNewCommentText: (text, dish) => dispatch(readNewCommentTextActionCreator(text, dish)),
-        createReadNewCommentText: (text, dish) => dispatch(createReadNewCommentTextActionCreator(text, dish)),
+        readNewCommentText: (text, dish) => dispatch(readNewCommentTextAC(text, dish)),
+        createReadNewCommentText: (text, dish) => dispatch(createReadNewCommentTextAC(text, dish)),
 
-        addComment: (props, dish) => dispatch(addCommentActionCreator(props, dish))
+        addComment: (props, dish) => dispatch(addCommentAC(props, dish))
     }
 }
 

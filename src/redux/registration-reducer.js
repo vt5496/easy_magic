@@ -69,53 +69,53 @@ const registrationReducer = (state = initialState, action) => {
 }
 
 
-export const readNewNameRegistrationTextActionCreator = text => ({
+export const readNewNameRegistrationTextAC = text => ({
     type: 'NEW-NAME-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
-export const readNewSurnameRegistrationTextActionCreator = text => ({
+export const readNewSurnameRegistrationTextAC = text => ({
     type: 'NEW-SURNAME-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
-export const readNewEmailRegistrationTextActionCreator = text => ({
+export const readNewEmailRegistrationTextAC = text => ({
     type: 'NEW-EMAIL-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
-export const readNewNumberRegistrationTextActionCreator = text => ({
+export const readNewNumberRegistrationTextAC = text => ({
     type: 'NEW-NUMBER-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
-export const readNewImgRegistrationTextActionCreator = text => ({
+export const readNewImgRegistrationTextAC = text => ({
     type: 'NEW-IMG-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
-export const readNewLoginRegistrationTextActionCreator = text => ({
+export const readNewLoginRegistrationTextAC = text => ({
     type: 'NEW-LOGIN-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
-export const readNewPasswordRegistrationTextActionCreator = text => ({
+export const readNewPasswordRegistrationTextAC = text => ({
     type: 'NEW-PASSWORD-REGISTRATION-TEXT',
-    text: text
+    text
 })
 
 
-export const registrationActionCreator = props => ({
+export const registrationAC = ({name, surname, email, number, img, login, password}) => ({
     type: 'REGISTRATION-NEW-USER',
-    name: props.registration.name,
-    surname: props.registration.surname,
-    email: props.registration.email,
-    number: props.registration.number,
-    img: props.registration.img,
-    login: props.registration.login,
-    password: props.registration.password
+    name,
+    surname,
+    email,
+    number,
+    img,
+    login,
+    password
 })
-export const fakeRegistrationActionCreator = () => ({
+export const fakeRegistrationAC = () => ({
     type: 'FAKE-REGISTRATION-NEW-USER'
 })
 

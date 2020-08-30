@@ -2,13 +2,13 @@ import React from "react";
 import {connect} from "react-redux";
 import Registration from "./Registration";
 import {
-    fakeRegistrationActionCreator,
-    readNewEmailRegistrationTextActionCreator,
-    readNewImgRegistrationTextActionCreator,
-    readNewLoginRegistrationTextActionCreator,
-    readNewNameRegistrationTextActionCreator,
-    readNewNumberRegistrationTextActionCreator, readNewPasswordRegistrationTextActionCreator,
-    readNewSurnameRegistrationTextActionCreator, registrationActionCreator
+    fakeRegistrationAC,
+    readNewEmailRegistrationTextAC,
+    readNewImgRegistrationTextAC,
+    readNewLoginRegistrationTextAC,
+    readNewNameRegistrationTextAC,
+    readNewNumberRegistrationTextAC, readNewPasswordRegistrationTextAC,
+    readNewSurnameRegistrationTextAC, registrationAC
 } from "../../redux/registration-reducer";
 
 let mapStateToProps = (state) => {
@@ -25,15 +25,15 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        readNewNameRegistrationText: (text) => dispatch(readNewNameRegistrationTextActionCreator(text)),
-        readNewSurnameRegistrationText: (text) => dispatch(readNewSurnameRegistrationTextActionCreator(text)),
-        readNewEmailRegistrationText: (text) => dispatch(readNewEmailRegistrationTextActionCreator(text)),
-        readNewNumberRegistrationText: (text) => dispatch(readNewNumberRegistrationTextActionCreator(text)),
-        readNewImgRegistrationText: (text) => dispatch(readNewImgRegistrationTextActionCreator(text)),
-        readNewLoginRegistrationText: (text) => dispatch(readNewLoginRegistrationTextActionCreator(text)),
-        readNewPasswordRegistrationText: (text) => dispatch(readNewPasswordRegistrationTextActionCreator(text)),
-        registration: (props) => dispatch(registrationActionCreator(props)),
-        fakeRegistration: () => dispatch(fakeRegistrationActionCreator())
+        readNewNameRegistrationText: (text) => dispatch(readNewNameRegistrationTextAC(text)),
+        readNewSurnameRegistrationText: (text) => dispatch(readNewSurnameRegistrationTextAC(text)),
+        readNewEmailRegistrationText: (text) => dispatch(readNewEmailRegistrationTextAC(text)),
+        readNewNumberRegistrationText: (text) => dispatch(readNewNumberRegistrationTextAC(text)),
+        readNewImgRegistrationText: (text) => dispatch(readNewImgRegistrationTextAC(text)),
+        readNewLoginRegistrationText: (text) => dispatch(readNewLoginRegistrationTextAC(text)),
+        readNewPasswordRegistrationText: (text) => dispatch(readNewPasswordRegistrationTextAC(text)),
+        registration: (props) => dispatch(registrationAC(props)),
+        fakeRegistration: () => dispatch(fakeRegistrationAC())
     }
 }
 

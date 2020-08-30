@@ -16,62 +16,60 @@ import {
 
 const Registration = (props) => {
 
-    let newNameRegistrationElement = React.createRef();
+    //create refs
+    let newNameRegistrationElement = React.createRef()
+    let newSurnameRegistrationElement = React.createRef();
+    let newEmailRegistrationElement = React.createRef();
+    let newNumberRegistrationElement = React.createRef();
+    let newImgRegistrationElement = React.createRef();
+    let newLoginRegistrationElement = React.createRef();
+    let newPasswordRegistrationElement = React.createRef();
+
+    //values of inputs
+    let newNameRegistrationTextValue = props.name;
+    let newSurnameRegistrationTextValue = props.surname;
+    let newEmailRegistrationTextValue = props.email;
+    let newNumberRegistrationTextValue = props.number;
+    let newImgRegistrationTextValue = props.img;
+    let newLoginRegistrationTextValue = props.login;
+    let newPasswordRegistrationTextValue = props.password;
+
+    //f dispatch
     let readNewNameRegistrationText = () => {
         let text = newNameRegistrationElement.current.value;
         props.readNewNameRegistrationText(text)
     };
-    let newNameRegistrationTextValue = props.registration.name;
-
-    let newSurnameRegistrationElement = React.createRef();
     let readNewSurnameRegistrationText = () => {
         let text = newSurnameRegistrationElement.current.value;
         props.readNewSurnameRegistrationText(text)
     };
-    let newSurnameRegistrationTextValue = props.registration.surname;
-
-    let newEmailRegistrationElement = React.createRef();
     let readNewEmailRegistrationText = () => {
         let text = newEmailRegistrationElement.current.value;
         props.readNewEmailRegistrationText(text)
     };
-    let newEmailRegistrationTextValue = props.registration.email;
-
-    let newNumberRegistrationElement = React.createRef();
     let readNewNumberRegistrationText = () => {
         let text = newNumberRegistrationElement.current.value;
         props.readNewNumberRegistrationText(text)
     };
-    let newNumberRegistrationTextValue = props.registration.number;
-
-    let newImgRegistrationElement = React.createRef();
     let readNewImgRegistrationText = () => {
         let text = newImgRegistrationElement.current.value;
         props.readNewImgRegistrationText(text)
     };
-    let newImgRegistrationTextValue = props.registration.img;
-
-    let newLoginRegistrationElement = React.createRef();
     let readNewLoginRegistrationText = () => {
         let text = newLoginRegistrationElement.current.value;
         props.readNewLoginRegistrationText(text)
     };
-    let newLoginRegistrationTextValue = props.registration.login;
-
-    let newPasswordRegistrationElement = React.createRef();
     let readNewPasswordRegistrationText = () => {
         let text = newPasswordRegistrationElement.current.value;
         props.readNewPasswordRegistrationText(text)
     };
-    let newPasswordRegistrationTextValue = props.password;
 
-    let registrationButton = (event) => {
-        event.preventDefault();
-        if (props.login && props.password && props.email && props.name && props.surname && props.img && props.number) {
-            props.registration(props)
-        } else {
+    let registrationButton = (e) => {
+        e.preventDefault();
+        (props.login && props.password && props.email && props.name &&
+            props.surname && props.img && props.number) ?
+            props.registration(props) :
             props.fakeRegistration()
-        }
     }
 
     return (

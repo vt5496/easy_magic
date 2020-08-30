@@ -100,57 +100,62 @@ let initialState = [
 ];
 
 const catalogReducer = (state = initialState, action) => {
-    let newState = [...state];
-
     switch (action.type) {
         case 'ADD-LIKE':
-            newState.map(dish => {
-                if (action.idDish == dish.idDish) {
-                    dish.likes++
+            return [...state.map(dish => {
+                if (action.idDish === dish.idDish) {
+                    return {...dish, likes: ++dish.likes}
                 }
-            })
-            return newState
+                return dish
+            })]
         case 'REMOVE-LIKE':
-            newState.map(dish => {
-                if (action.idDish == dish.idDish) {
-                    dish.likes--
+            return [...state.map(dish => {
+                if (action.idDish === dish.idDish) {
+                    return {...dish, likes: --dish.likes}
                 }
-            })
-            return newState
-
+               return dish
+            })]
         case 'ADD-COMMENT':
-             newState[action.idDish].comments.push({
-                idUser: action.idUser,
-                idComment: action.idComment,
-                value: action.value,
-                date: new Date()
-            });
-            return newState;
+            return [...state.map(dish => {
+                if (action.idDish === dish.idDish) {
+                    return {...dish,
+                    comments: [...dish.comments, {
+                        idUser: action.idUser,
+                        idComment: action.idComment,
+                        value: action.newCommentTextValue,
+                        date: new Date()
+                    }]}
+                }
+                return dish;
+            })]
 
         default:
-            return newState;
+            return state;
     }
 
-    return newState;
+    return state;
 }
 
 
-export const addLikeActionCreator = dish => ({
+export const addLikeAC = ({idDish}) => ({
     type: 'ADD-LIKE',
-    idDish: dish.idDish
+    idDish
 });
-export const removeLikeActionCreator = dish => ({
+export const removeLikeAC = ({idDish}) => ({
     type: 'REMOVE-LIKE',
-    idDish: dish.idDish,
+    idDish,
 });
 
-export const addCommentActionCreator = (props, dish) => ({
-    type: 'ADD-COMMENT',
-    idDish: dish.idDish,
-    idUser: props.user.idUser,
-    idComment: dish.comments.length,
-    value: props.user.newCommentText[dish.idDish].value
-});
+export const addCommentAC = ({user}, {idDish, comments}) => {
+    let newCommentTextValue = user.newCommentText.find(d => d.idDish === idDish).value;
+    return ({
+        type: 'ADD-COMMENT',
+        idDish,
+        idUser: user.idUser,
+        idComment: comments.length,
+        newCommentTextValue
+    });
+}
 
 
 export default catalogReducer;
