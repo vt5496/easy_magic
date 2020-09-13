@@ -1,4 +1,4 @@
-let initialState = {
+const initialState = {
     name: '',
     surname: '',
     email: '',

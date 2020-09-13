@@ -1,4 +1,4 @@
-let initialState = [
+const initialState = [
     {
         idUser: 0,
         login: 'vt5496',

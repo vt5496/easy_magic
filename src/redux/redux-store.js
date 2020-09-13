@@ -6,7 +6,7 @@ import authorizationReducer from "./authorization-reducer";
 import usersReducer from "./users-reducer";
 import finderReducer from "./finder-reducer"
 
-let reducers = combineReducers({
+const reducers = combineReducers({
     catalog: catalogReducer,
     user: userReducer,
     users: usersReducer,
@@ -15,7 +15,11 @@ let reducers = combineReducers({
     finder: finderReducer
 })
 
-let store = createStore(reducers);
+// let localStorageCheck = localStorage['react-redux'] ?
+//     JSON.parse(localStorage['react-redux']) :
+//     {};
+
+const store = createStore(reducers);
 
 window.state = store.getState();
 

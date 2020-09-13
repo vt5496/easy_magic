@@ -1,18 +1,8 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
-
+import {Link} from "react-router-dom";
 
 import s from './registration.module.css'
-import {
-    fakeRegistration,
-    readNewEmailRegistrationText,
-    readNewImgRegistrationText,
-    readNewLoginRegistrationText,
-    readNewNameRegistrationText,
-    readNewNumberRegistrationText,
-    readNewPasswordRegistrationText,
-    readNewSurnameRegistrationText, registration
-} from "../../redux/registration-reducer";
+
 
 const Registration = (props) => {
 
@@ -105,9 +95,9 @@ const Registration = (props) => {
                 <input ref={newPasswordRegistrationElement} onChange={readNewPasswordRegistrationText}
                        value={newPasswordRegistrationTextValue} type="password"/>
 
-                <NavLink exact to='/authorization'>
+                <Link exact to='/authorization'>
                     <button onClick={registrationButton}>Sign up</button>
-                </NavLink>
+                </Link>
             </form>
         </div>
     )

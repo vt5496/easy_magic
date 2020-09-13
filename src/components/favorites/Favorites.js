@@ -6,18 +6,25 @@ import s from './favorites.module.css';
 import like from "../../img/heart.svg";
 
 
-const Favorites = (props) => {
+const Favorites = (props,
+                   {catalog, user, users, img,
+                       addLike, removeLike,
+                       readNewCommentText, createReadNewCommentText,
+                       addComment}) => {
 
-    let imgLike = like;
-    let MainLikeFilter = props.catalog.map(dish => {
+
+    let MainLikeFilter = props.catalog.pizza.map((dish, i) => {
+
         if (props.user.likes.includes(dish.idDish)) {
             return <OneDish
+                key={i}
+
                 user={props.user}
                 users={props.users}
                 img={props.img}
                 dish={dish}
 
-                imgLike={imgLike}
+                imgLike={like}
 
                 addLike={props.addLike}
                 removeLike={props.removeLike}

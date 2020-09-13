@@ -6,8 +6,8 @@ import s from './profile.module.css'
 const Profile = () =>{
     return(
         <div className={s.main}>
-            <NavLink exact to="/authorization"><button>Sign in</button></NavLink>
-            <NavLink exact to="/registration"><button>Sign up</button></NavLink>
+            <NavLink exact to="/profile/authorization"><button>Sign in</button></NavLink>
+            <NavLink exact to="/profile/registration"><button>Sign up</button></NavLink>
         </div>
     )
 };

@@ -6,6 +6,9 @@
     flex-direction: column;
     width: 300px;
 }
+.main:hover{
+    background-color: #ecece3;
+}
 .title{
     display: flex;
     flex-direction: row;
@@ -29,5 +32,11 @@
 }
 
 .descriptionImg{
-
+    height: 100px;
+}
+.like {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

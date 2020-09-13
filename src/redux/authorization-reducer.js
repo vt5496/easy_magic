@@ -1,3 +1,6 @@
+import {Redirect} from 'react-router-dom'
+import React from "react";
+
 let initialState = {
     login: '',
     password: ''

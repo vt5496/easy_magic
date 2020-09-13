@@ -1,43 +1,38 @@
 import React from "react";
 
-import {
-    authorizationActionCreator,
-    fakeAuthorizationActionCreator,
-    readNewLoginTextActionCreator
-} from "../../redux/authorization-reducer";
-import {readNewPasswordTextActionCreator} from "../../redux/authorization-reducer";
-
 import s from './authorization.module.css'
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const Authorization = (props) => {
+const Authorization = ({
+                           readNewLoginText, readNewPasswordText,
+                           authorization, fakeAuthorization,
+                           login, password, users
+                       }) => {
 
     let newLoginElement = React.createRef();
-    let readNewLoginText = () => {
-        let text = newLoginElement.current.value;
-        props.readNewLoginText(text)
-    };
-    let newLoginTextValue = props.login;
-
     let newPasswordElement = React.createRef();
-    let readNewPasswordText = () => {
-        let text = newPasswordElement.current.value;
-        props.readNewPasswordText(text)
-    };
-    let newPasswordTextValue = props.password;
 
-    let authorizationButton = (event) => {
-        event.preventDefault();
-        if (props.users.find(user => user.login === props.login)) {
-            let user = props.users.find(user => user.login === props.login);
-            if (user.password === props.password) {
-                return props.authorization(props, user)
-            } else {
-                return props.fakeAuthorization()
-            }
-        } else {
-            return props.fakeAuthorization()
-        }
+    let newLoginTextValue = login;
+    let newPasswordTextValue = password;
+
+    let onReadNewLoginText = () => {
+        let text = newLoginElement.current.value;
+        readNewLoginText(text)
+    };
+
+    let onReadNewPasswordText = () => {
+        let text = newPasswordElement.current.value;
+        readNewPasswordText(text)
+    };
+
+
+    let authorizationButton = (e) => {
+        e.preventDefault();
+        let user = users.find(user => user.login === login)
+        return (user) ?
+            (user.password === password) ?
+                authorization({login, password}, user)
+                : fakeAuthorization() : fakeAuthorization()
     }
 
     return (
@@ -46,14 +41,14 @@ const Authorization = (props) => {
                 <h2>Authorization</h2>
 
                 <span>Login</span>
-                <input ref={newLoginElement} onChange={readNewLoginText} type="text" value={newLoginTextValue}/>
+                <input ref={newLoginElement} onChange={onReadNewLoginText} type="text" value={newLoginTextValue}/>
 
                 <span>Password</span>
-                <input ref={newPasswordElement} onChange={readNewPasswordText} type="password"
+                <input ref={newPasswordElement} onChange={onReadNewPasswordText} type="password"
                        value={newPasswordTextValue}/>
 
 
-                <button onClick={authorizationButton}><NavLink className={s.link} exact to="/home">Sign in</NavLink>
+                <button onClick={authorizationButton}><Link className={s.link} exact to="/home">Sign in</Link>
                 </button>
 
             </form>

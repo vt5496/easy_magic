@@ -13,18 +13,39 @@ const Finder = (props) => {
     let readNewFinderText = () => {
         let text = newFinderElement.current.value;
         props.readNewFinderText(text)
+        props.emptyFinder();
+        return (text) ?
+            props.catalog.map(dish => {
+                if (dish.name.toLowerCase().includes(text.toLowerCase())) {
+                    props.finderDishs(dish)
+                }
+            }) :
+            props.emptyFinder()
     }
     let newFinderTextValue = props.user.finderText;
+
+    let onFinderDishs = (e) => {
+        e.preventDefault();
+        props.emptyFinder();
+        let text = newFinderElement.current.value;
+        return (newFinderElement.current.value) ?
+            props.catalog.map(dish => {
+                if (dish.name.toLowerCase().includes(text.toLowerCase())) {
+                    props.finderDishs(dish)
+                }
+            }) :
+            props.emptyFinder()
+    }
+
     let imgLike = likeO;
 
-    let finderDishsCatalog = props.catalog.map(dish => {
-        if (props.finder.includes(dish.idDish)) {
+    let finderDishsCatalog = props.catalog.pizza.map(dish => {
+        if (props.finder.idDish === dish.idDish) {
 
-            if (props.user.likes.includes(dish.idDish) === true) {
-                imgLike = like;
-            } else {
+            (props.user.likes.includes(dish.idDish) === true) ?
+                imgLike = like :
                 imgLike = likeO
-            }
+
 
             return <OneDish
                 user={props.user}
@@ -45,22 +66,11 @@ const Finder = (props) => {
         }
     })
 
-    let finderDishs = (event) => {
-        event.preventDefault();
-        props.emptyFinder();
-        props.catalog.map(dish => {
-            let text = newFinderElement.current.value;
-            if (dish.name.toLowerCase().includes(text.toLowerCase())) {
-                props.finderDishs(dish)
-            }
-        })
-    }
-
     return (
         <div className={s.List}>
             <form action="">
                 <input type="text" ref={newFinderElement} onChange={readNewFinderText} value={newFinderTextValue}/>
-                <button onClick={finderDishs}>Find</button>
+                <button onClick={onFinderDishs}>Find</button>
             </form>
             {finderDishsCatalog}
         </div>

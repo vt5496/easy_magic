@@ -1,0 +1,14 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main>span{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.like{
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-let initialState = {
+const initialState = {
     idUser: 0,
     login: 'vt5496',
     name: "Vlad",
@@ -29,22 +29,18 @@ const userReducer = (state = initialState, action) => {
                 likes: [...state.likes, action.idDish]
             }
         case 'REMOVE-LIKE':
-            let removeLike = [...state.likes]
-            removeLike.splice(state.likes.indexOf(action.idDish))
             return {
                 ...state,
-                likes: removeLike
+                likes: [...state.likes.filter(like => like !== action.idDish)]
             }
 
         case 'READ-NEW-COMMENT-TEXT':
             return {
                 ...state,
                 newCommentText: [...state.newCommentText.map(commentObject => {
-                    if (commentObject.idDish === action.idDish) {
-                        debugger;
-                        return {idDish: commentObject.idDish, value: action.newCommentText}
-                    }
-                    return commentObject;
+                    return (commentObject.idDish === action.idDish) ?
+                        {idDish: commentObject.idDish, value: action.newCommentText} :
+                        commentObject;
                 })]
 
             }
@@ -59,7 +55,8 @@ const userReducer = (state = initialState, action) => {
         case 'ADD-COMMENT':
             return {
                 ...state,
-                newCommentText: [...state.newCommentText.find(commentObject => commentObject.idDish === action.idDish).value = '']
+                newCommentText: [...state.newCommentText.filter(commentObject =>
+                    commentObject.idDish !== action.idDish)]
             }
 
         case 'AUTHORIZATION':

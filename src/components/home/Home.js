@@ -21,7 +21,8 @@ const Home = (props) => {
                     <img src={props.user.img} alt=""/>
                 </div>
                 <div className={s.quote}>
-                    "Just sasat now" by vt5496
+                    {`"DW with MM", "MW", "MR"
+                    by vt5496`}
                 </div>
                 <NavLink className={s.newDish} exact to="/new">
                     <div>New Dishs</div>

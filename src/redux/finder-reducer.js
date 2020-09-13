@@ -1,4 +1,4 @@
-let initialState = []
+const initialState = []
 
 let finderReducer = (state = initialState, {type, idDish}) => {
     switch (type) {
