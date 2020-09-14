@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 
 import Nav from './components/Nav'
@@ -15,29 +15,30 @@ import AuthorizationContainer from "./components/authorization/AuthorizationCont
 import RegistrationContainer from "./components/registration/RegistrationContainer";
 
 import s from './app.module.css';
-import OneDish from "./components/dishCard/bigDishCard/OneDish";
+import Error404 from "./components/Error404/Erкor404";
 
 
-const App = () => {
-    return (
-            <div className={s.container}>
-                <div className={s.main}>
-                    <Route exact path='/' component={HomeContainer}/>
-                    <Route path='/favorites' component={FavoritesContainer}/>
-                    <Route path='/finder' component={FinderContainer}/>
-                    <Route path='/shopcart' component={ShoppingCart}/>
-                    <Route path='/profile' component={Profile}/>
+const App = () =>
+    <div className={s.container}>
+        <div className={s.main}>
 
-                    <Route path='/profile/authorization' component={AuthorizationContainer}/>
-                    <Route path='/profile/registration' component={RegistrationContainer}/>
+            <Switch>
+                <Route exact path='/' component={HomeContainer}/>
+                <Route path='/favorites' component={FavoritesContainer}/>
+                <Route path='/finder' component={FinderContainer}/>
+                <Route path='/shopcart' component={ShoppingCart}/>
+                <Route path='/profile' component={Profile}/>
 
-                    <Route path='/catalog' component={CatalogContainer}/>
+                <Route path='/profile/authorization' component={AuthorizationContainer}/>
+                <Route path='/profile/registration' component={RegistrationContainer}/>
 
-                    <Route path='/:idDish' component={OneDish} />
-                </div>
-                <Nav/>
-            </div>
-    )
-};
+                <Route path='/catalog' component={CatalogContainer}/>
+
+                <Route component={Error404}/>
+            </Switch>
+        </div>
+
+        <Nav/>
+    </div>
 
 export default App;

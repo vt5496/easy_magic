@@ -1,6 +1,5 @@
 import React from "react";
 
-import Catalog from "./catalog/Catalog";
 
 import arrLeft from '../../img/keyboard_arrow_left.svg'
 import arrRight from '../../img/keyboard_arrow_right.svg'
@@ -9,8 +8,7 @@ import s from './home.module.css'
 import Footer from "../footer/Footer";
 import {NavLink} from "react-router-dom";
 
-const Home = (props) => {
-    return (
+const Home = props =>
         <div className={s.container}>
             <div className={s.main}>
                 <div className={s.head}>
@@ -41,7 +39,5 @@ const Home = (props) => {
                 <Footer/>
             </div>
         </div>
-    )
-}
 
 export default Home;

@@ -10,6 +10,7 @@ const Comments = (props) => {
             key={i}
             users={props.users}
             comment={comment}/>)
+
     return (<div>
             {arrComments}
         </div>

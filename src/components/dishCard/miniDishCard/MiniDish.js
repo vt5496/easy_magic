@@ -2,11 +2,17 @@ import React from "react";
 
 import s from './miniDish.module.css'
 import Like from "./likes/Like";
+import likeO from "../../../img/heart-o.svg";
+import like from "../../../img/heart.svg";
+
 
 const MiniDish = (props) => {
 
+    let imgLike = likeO
+    if (props.user.likes.includes(props.dish.idDish) === true) imgLike = like;
+
     return (
-        <div className={s.main} onClick={()=>history.push()}>
+        <div className={s.main}>
 
             <div className={s.title}>
                 <span className={s.name}>{props.dish.name}</span>
@@ -32,7 +38,7 @@ const MiniDish = (props) => {
 
             <div className={s.like}>
                 star 0-5
-                <Like user={props.user} dish={props.dish} imgLike={props.imgLike} img={props.img}
+                <Like user={props.user} dish={props.dish} imgLike={imgLike} img={props.img}
                       addLike={props.addLike} removeLike={props.removeLike}/>
             </div>
         </div>

@@ -1,11 +1,18 @@
-const initialState = []
+const initialState = {
+    dishs: [],
+    words: []
+}
 
-let finderReducer = (state = initialState, {type, idDish}) => {
+let finderReducer = (state = initialState, {type, idDish, word}) => {
     switch (type) {
-        case 'FINDER-EMPTY':
-            return []
         case 'FINDER-DISHS':
-            return [...state, idDish]
+            return {...state, dishs: [...state.dishs, idDish]}
+        case 'FINDER-DISHS-EMPTY':
+            return {...state, dishs: []}
+        case 'FINDER-WORDS':
+            return {...state, words: [...state.words, idDish]}
+        case 'FINDER-WORDS-EMPTY':
+            return {...state, words: []}
         default:
             return state
     }
@@ -20,9 +27,22 @@ export const finderDishsAC = ({idDish}) => {
     })
 }
 
-export const finderEmptyAC = () => {
+export const finderDishsEmptyAC = () => {
     return ({
-        type: 'FINDER-EMPTY'
+        type: 'FINDER-DISHS-EMPTY'
+    })
+}
+
+export const finderWordsAC = ({idDish}) => {
+    return ({
+        type: 'FINDER-WORDS',
+        idDish
+    })
+}
+
+export const finderWordsEmptyAC = () => {
+    return ({
+        type: 'FINDER-WORDS-EMPTY'
     })
 }
 

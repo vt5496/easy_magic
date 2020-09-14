@@ -2,12 +2,9 @@ import React from "react";
 
 import s from './news.module.css'
 
-const News = () => {
-    return(
+const News = () =>
         <div>
             News
         </div>
-    )
-};
 
 export default News;

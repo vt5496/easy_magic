@@ -1,78 +1,69 @@
-import React, {createRef} from "react";
-
-import OneDish from "../dishCard/bigDishCard/OneDish";
-
+import React from "react";
 
 import s from './Finder.module.css'
-import like from "../../img/heart.svg";
-import likeO from "../../img/heart-o.svg";
+import MiniDish from "../dishCard/miniDishCard/MiniDish";
 
 const Finder = (props) => {
 
-    let newFinderElement = React.createRef();
-    let readNewFinderText = () => {
-        let text = newFinderElement.current.value;
-        props.readNewFinderText(text)
-        props.emptyFinder();
+    let finderInputRef = React.createRef();
+    let finderInputValue = props.user.finderText;
+
+    let onReadFinderInput = () => {
+        let text = finderInputRef.current.value;
+        props.readNewFinderInputValue(text)
+        props.finderWordsEmpty()
         return (text) ?
-            props.catalog.map(dish => {
+            props.catalog.pizza.map(dish => {
+                if (dish.name.toLowerCase().includes(text.toLowerCase())) {
+                    props.finderWords(dish)
+                }
+            }) :
+            props.finderWordsEmpty()
+    }
+    let findWordsArr = props.catalog.pizza.filter(d =>
+        props.finderWordsArr.includes(d.idDish))
+    let textsDOM = findWordsArr.map(d =>
+        <div>
+            {d.name}
+        </div>)
+
+
+    let onFindDish = (e) => {
+        e.preventDefault()
+        props.finderDishsEmpty()
+        props.finderWordsEmpty()
+        let text = finderInputRef.current.value;
+        return (text) ?
+            props.catalog.pizza.map(dish => {
                 if (dish.name.toLowerCase().includes(text.toLowerCase())) {
                     props.finderDishs(dish)
                 }
             }) :
-            props.emptyFinder()
+            props.finderDishsEmpty()
     }
-    let newFinderTextValue = props.user.finderText;
+    let findDishsArr = props.catalog.pizza.filter(d =>
+        props.finderDishsArr.includes(d.idDish))
+    let findDOM = findDishsArr.map((d, i) =>
+        <MiniDish
+            key={i}
 
-    let onFinderDishs = (e) => {
-        e.preventDefault();
-        props.emptyFinder();
-        let text = newFinderElement.current.value;
-        return (newFinderElement.current.value) ?
-            props.catalog.map(dish => {
-                if (dish.name.toLowerCase().includes(text.toLowerCase())) {
-                    props.finderDishs(dish)
-                }
-            }) :
-            props.emptyFinder()
-    }
+            user={props.user}
+            users={props.users}
+            img={props.img}
+            dish={d}
 
-    let imgLike = likeO;
-
-    let finderDishsCatalog = props.catalog.pizza.map(dish => {
-        if (props.finder.idDish === dish.idDish) {
-
-            (props.user.likes.includes(dish.idDish) === true) ?
-                imgLike = like :
-                imgLike = likeO
-
-
-            return <OneDish
-                user={props.user}
-                users={props.users}
-                img={props.img}
-                dish={dish}
-
-                imgLike={imgLike}
-
-                addLike={props.addLike}
-                removeLike={props.removeLike}
-
-                readNewCommentText={props.readNewCommentText}
-                createReadNewCommentText={props.createReadNewCommentText}
-
-                addComment={props.addComment}
-            />
-        }
-    })
+            addLike={props.addLike}
+            removeLike={props.removeLike}
+        />)
 
     return (
         <div className={s.List}>
-            <form action="">
-                <input type="text" ref={newFinderElement} onChange={readNewFinderText} value={newFinderTextValue}/>
-                <button onClick={onFinderDishs}>Find</button>
+            <form onSubmit={onFindDish}>
+                <input type="text" ref={finderInputRef} onChange={onReadFinderInput} value={finderInputValue}/>
+                <button>Find</button>
             </form>
-            {finderDishsCatalog}
+            {textsDOM}
+            {findDOM}
         </div>
     );
 }

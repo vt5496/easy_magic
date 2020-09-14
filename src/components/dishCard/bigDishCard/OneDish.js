@@ -6,10 +6,8 @@ import Comments from './comments/Comments'
 import Share from "./share/share";
 
 import s from './OneDish.module.css';
-import Catalog from "../../home/catalog/Catalog";
 
-const OneDish = (props) => {
-    return (
+const OneDish = (props) =>
         <div className={s.Dish}>
             <div className={s.main}>
                 <span className={s.name}>{props.dish.name}</span>
@@ -37,7 +35,5 @@ const OneDish = (props) => {
                 <Comments user={props.user} users={props.users} dish={props.dish}/>
             </div>
         </div>
-    )
-};
 
 export default OneDish;

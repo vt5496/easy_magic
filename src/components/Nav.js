@@ -11,8 +11,7 @@ import s from './Nav.module.css';
 
 
 
-const Nav = (props) => {
-    return (
+const Nav = () =>
         <div>
             <ul className={s.NavBar}>
                 <li><NavLink exact strict to="/" activeClassName={s.active}><img src={home} alt="Home"/></NavLink></li>
@@ -22,8 +21,6 @@ const Nav = (props) => {
                 <li><NavLink exact to="/profile" activeClassName={s.active}><img src={profile} alt="Profile"/></NavLink></li>
             </ul>
         </div>
-    )
-};
 
 export default Nav;
 

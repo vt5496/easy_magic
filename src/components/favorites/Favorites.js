@@ -1,46 +1,29 @@
 import React from "react";
 
-import OneDish from "../dishCard/bigDishCard/OneDish";
-
 import s from './favorites.module.css';
-import like from "../../img/heart.svg";
+import MiniDish from "../dishCard/miniDishCard/MiniDish";
 
+const Favorites = (props) => {
 
-const Favorites = (props,
-                   {catalog, user, users, img,
-                       addLike, removeLike,
-                       readNewCommentText, createReadNewCommentText,
-                       addComment}) => {
+    let favArr = props.catalog.pizza.filter(d =>
+        props.user.likes.includes(d.idDish))
+    let favDOM = favArr.map((dish, i) =>
+        <MiniDish
+            key={i}
 
+            user={props.user}
+            users={props.users}
+            img={props.img}
+            dish={dish}
 
-    let MainLikeFilter = props.catalog.pizza.map((dish, i) => {
-
-        if (props.user.likes.includes(dish.idDish)) {
-            return <OneDish
-                key={i}
-
-                user={props.user}
-                users={props.users}
-                img={props.img}
-                dish={dish}
-
-                imgLike={like}
-
-                addLike={props.addLike}
-                removeLike={props.removeLike}
-
-                readNewCommentText={props.readNewCommentText}
-                createReadNewCommentText={props.createReadNewCommentText}
-
-                addComment={props.addComment}
-            />
-        }
-    });
-
+            addLike={props.addLike}
+            removeLike={props.removeLike}
+        />
+    )
 
     return (
         <div className={s.List}>
-            {MainLikeFilter}
+            {favDOM}
         </div>
     )
 };

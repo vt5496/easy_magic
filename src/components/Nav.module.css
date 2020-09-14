@@ -4,10 +4,12 @@
     background-color: #fae1ff;
     width: 100%;
     justify-content: center;
+    align-items: center;
     position: fixed;
     left: 0;
     bottom: 0;
     margin: 0;
+    padding: 0;
 
 }
 .NavBar li {

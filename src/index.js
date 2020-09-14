@@ -6,8 +6,6 @@ import React from 'react';
 import {render} from 'react-dom';
 import {HashRouter} from "react-router-dom";
 
-
-import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 
 
@@ -17,7 +15,8 @@ export let rerenderEntireTree = () => {
             <Provider store={store}>
                 <App/>
             </Provider>
-        </HashRouter>, document.getElementById('root')
+        </HashRouter>,
+        document.getElementById('root')
     );
 };
 
