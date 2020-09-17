@@ -1,0 +1,28 @@
+.List{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    padding: 5px 5px;
+    width: 180px;
+    font-size: 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.input:focus+.textsDOM{
+    display: flex;
+}
+.button{
+    margin-bottom: 0;
+    padding: 5px 20px;
+    font-size: 25px;
+    background-color: wheat;
+    border-radius: 5px;
+    border-color: wheat;
+}
+.textsDOM{
+display: none;
+}

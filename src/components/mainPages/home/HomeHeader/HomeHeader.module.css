@@ -1,0 +1,43 @@
+.main{
+    width: 100%;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title>h1{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.title>h2{
+    font-size: 20px;
+    color: #656564;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.head>img{
+    width: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid #b40090;
+}
+
+.quote{
+    margin: 0 0 30px 0;
+    font-family: cursive;
+    font-size: 30px;
+    text-align: center;
+
+}

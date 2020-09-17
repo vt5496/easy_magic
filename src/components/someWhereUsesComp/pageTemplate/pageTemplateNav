@@ -1,0 +1,47 @@
+import React from "react";
+import Nav from "../Nav/Nav";
+import HomeContainer from "../../mainPages/home/HomeContainer";
+import FavoritesContainer from "../../mainPages/favorites/FavoritesContainer";
+import ShoppingCart from "../../mainPages/shoppingCart/ShoppingCart";
+import FinderContainer from "../../mainPages/Finder/FinderContainer";
+import Profile from "../../mainPages/profile/Profile";
+import CatalogContainer from "../../mainPages/home/catalog/CatalogContainer";
+
+const PageTemplateNav = ({children}) =>
+    <div>
+        {children}
+
+        <Nav/>
+    </div>
+
+export const Home = () =>
+        <PageTemplateNav>
+            <HomeContainer />
+        </PageTemplateNav>
+
+
+export const Catalog = () =>
+        <PageTemplateNav>
+            <CatalogContainer />
+        </PageTemplateNav>
+
+export const Favorites = () =>
+        <PageTemplateNav>
+            <FavoritesContainer />
+        </PageTemplateNav>
+
+export const Finder = () =>
+        <PageTemplateNav>
+            <FinderContainer />
+        </PageTemplateNav>
+
+export const ShoppingCartt = () =>
+        <PageTemplateNav>
+            <ShoppingCart />
+        </PageTemplateNav>
+
+export const Profilee = () =>
+        <PageTemplateNav>
+            <Profile />
+        </PageTemplateNav>
+

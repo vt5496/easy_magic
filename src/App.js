@@ -2,43 +2,41 @@ import React from 'react';
 import {Route, Switch} from "react-router-dom";
 
 
-import Nav from './components/Nav'
+import Nav from './components/someWhereUsesComp/Nav/Nav'
 
-import FinderContainer from "./components/Finder/FinderContainer";
-import ShoppingCart from "./components/shoppingCart/ShoppingCart";
-import Profile from "./components/profile/Profile";
+import FinderContainer from "./components/mainPages/Finder/FinderContainer";
+import ShoppingCart from "./components/mainPages/shoppingCart/ShoppingCart";
+import Profile from "./components/mainPages/profile/Profile";
 
-import CatalogContainer from "./components/home/catalog/CatalogContainer";
-import FavoritesContainer from "./components/favorites/FavoritesContainer";
-import HomeContainer from "./components/home/HomeContainer";
-import AuthorizationContainer from "./components/authorization/AuthorizationContainer";
-import RegistrationContainer from "./components/registration/RegistrationContainer";
+import CatalogContainer from "./components/mainPages/home/catalog/CatalogContainer";
+import FavoritesContainer from "./components/mainPages/favorites/FavoritesContainer";
+import HomeContainer from "./components/mainPages/home/HomeContainer";
 
 import s from './app.module.css';
-import Error404 from "./components/Error404/Erкor404";
+import Error404 from "./components/someWhereUsesComp/Error404/Erкor404";
+import UniqueIDHeader from "./components/someWhereUsesComp/dishCard/oneDishCard/UniqueIDHeader/UniqueIDHeader";
 
 
 const App = () =>
     <div className={s.container}>
-        <div className={s.main}>
 
+        <div className={s.main}>
             <Switch>
-                <Route exact path='/' component={HomeContainer}/>
+                <Route exact path='/' component={HomeContainer} />
                 <Route path='/favorites' component={FavoritesContainer}/>
                 <Route path='/finder' component={FinderContainer}/>
                 <Route path='/shopcart' component={ShoppingCart}/>
                 <Route path='/profile' component={Profile}/>
-
-                <Route path='/profile/authorization' component={AuthorizationContainer}/>
-                <Route path='/profile/registration' component={RegistrationContainer}/>
-
                 <Route path='/catalog' component={CatalogContainer}/>
 
-                <Route component={Error404}/>
+                <Route path='/:id' component={UniqueIDHeader} />
+
+                <Route path='/error404' component={Error404}/>
             </Switch>
         </div>
 
         <Nav/>
+
     </div>
 
 export default App;

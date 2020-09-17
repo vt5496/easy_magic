@@ -9,7 +9,7 @@ import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 
 
-export let rerenderEntireTree = () => {
+export const rerenderEntireTree = () => {
     render(
         <HashRouter>
             <Provider store={store}>
