@@ -2,42 +2,37 @@ import React from "react";
 import {connect} from "react-redux";
 import Registration from "./Registration";
 import {
-    fakeRegistrationAC,
-    readNewEmailRegistrationTextAC,
-    readNewImgRegistrationTextAC,
-    readNewLoginRegistrationTextAC,
-    readNewNameRegistrationTextAC,
-    readNewNumberRegistrationTextAC, readNewPasswordRegistrationTextAC,
-    readNewSurnameRegistrationTextAC, registrationAC
+    fakeRegAC,
+    readNewEmailRegTextAC,
+    readNewImgRegTextAC,
+    readNewLoginRegTextAC,
+    readNewNameRegTextAC,
+    readNewNumberRegTextAC, readNewPasswordRegTextAC,
+    readNewSurnameRegTextAC, regAC
 } from "../../../../redux/registration-reducer";
 
-let mapStateToProps = (state) => {
-    return {
-        name: state.registration.name,
-        surname: state.registration.surname,
-        email: state.registration.email,
-        number: state.registration.number,
-        img: state.registration.img,
-        login: state.registration.login,
-        password: state.registration.password
+let mapStateToProps = ({registration}) => ({
+        nameValue: registration.name,
+        surnameValue: registration.surname,
+        emailValue: registration.email,
+        numberValue: registration.number,
+        imgValue: registration.img,
+        loginValue: registration.login,
+        passwordValue: registration.password
+})
+let mapDispatchToProps = dispatch => ({
+        readNewNameRegText: text => dispatch(readNewNameRegTextAC(text)),
+        readNewSurnameRegText: text => dispatch(readNewSurnameRegTextAC(text)),
+        readNewEmailRegText: text => dispatch(readNewEmailRegTextAC(text)),
+        readNewNumberRegText: text => dispatch(readNewNumberRegTextAC(text)),
+        readNewImgRegText: text => dispatch(readNewImgRegTextAC(text)),
+        readNewLoginRegText: text => dispatch(readNewLoginRegTextAC(text)),
+        readNewPasswordRegText: text => dispatch(readNewPasswordRegTextAC(text)),
+        reg: props => dispatch(regAC(props)),
+        fakeReg: () => dispatch(fakeRegAC())
+    })
 
-    }
-}
-let mapDispatchToProps = (dispatch) => {
-    return {
-        readNewNameRegistrationText: (text) => dispatch(readNewNameRegistrationTextAC(text)),
-        readNewSurnameRegistrationText: (text) => dispatch(readNewSurnameRegistrationTextAC(text)),
-        readNewEmailRegistrationText: (text) => dispatch(readNewEmailRegistrationTextAC(text)),
-        readNewNumberRegistrationText: (text) => dispatch(readNewNumberRegistrationTextAC(text)),
-        readNewImgRegistrationText: (text) => dispatch(readNewImgRegistrationTextAC(text)),
-        readNewLoginRegistrationText: (text) => dispatch(readNewLoginRegistrationTextAC(text)),
-        readNewPasswordRegistrationText: (text) => dispatch(readNewPasswordRegistrationTextAC(text)),
-        registration: (props) => dispatch(registrationAC(props)),
-        fakeRegistration: () => dispatch(fakeRegistrationAC())
-    }
-}
+const RegContainer = connect(mapStateToProps, mapDispatchToProps)(Registration)
 
-const RegistrationContainer = connect(mapStateToProps, mapDispatchToProps)(Registration)
-
-export default RegistrationContainer;
+export default RegContainer;
 

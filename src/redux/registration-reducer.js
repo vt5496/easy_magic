@@ -69,43 +69,43 @@ const registrationReducer = (state = initialState, action) => {
 }
 
 
-export const readNewNameRegistrationTextAC = text => ({
+export const readNewNameRegTextAC = text => ({
     type: 'NEW-NAME-REGISTRATION-TEXT',
     text
 })
 
-export const readNewSurnameRegistrationTextAC = text => ({
+export const readNewSurnameRegTextAC = text => ({
     type: 'NEW-SURNAME-REGISTRATION-TEXT',
     text
 })
 
-export const readNewEmailRegistrationTextAC = text => ({
+export const readNewEmailRegTextAC = text => ({
     type: 'NEW-EMAIL-REGISTRATION-TEXT',
     text
 })
 
-export const readNewNumberRegistrationTextAC = text => ({
+export const readNewNumberRegTextAC = text => ({
     type: 'NEW-NUMBER-REGISTRATION-TEXT',
     text
 })
 
-export const readNewImgRegistrationTextAC = text => ({
+export const readNewImgRegTextAC = text => ({
     type: 'NEW-IMG-REGISTRATION-TEXT',
     text
 })
 
-export const readNewLoginRegistrationTextAC = text => ({
+export const readNewLoginRegTextAC = text => ({
     type: 'NEW-LOGIN-REGISTRATION-TEXT',
     text
 })
 
-export const readNewPasswordRegistrationTextAC = text => ({
+export const readNewPasswordRegTextAC = text => ({
     type: 'NEW-PASSWORD-REGISTRATION-TEXT',
     text
 })
 
 
-export const registrationAC = ({name, surname, email, number, img, login, password}) => ({
+export const regAC = ({name, surname, email, number, img, login, password}) => ({
     type: 'REGISTRATION-NEW-USER',
     name,
     surname,
@@ -115,7 +115,7 @@ export const registrationAC = ({name, surname, email, number, img, login, passwo
     login,
     password
 })
-export const fakeRegistrationAC = () => ({
+export const fakeRegAC = () => ({
     type: 'FAKE-REGISTRATION-NEW-USER'
 })
 

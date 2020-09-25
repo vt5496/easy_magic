@@ -1,25 +1,11 @@
 import React from "react";
-
 import s from './favorites.module.css';
-import MiniDishContainer from "../../someWhereUsesComp/dishCard/miniDishCard/MiniDishContainer";
+import DishesDOMContainer from "../../dishes/dishesDOM/DishesDOMContainer";
 
-const Favorites = ({catalog, user}) => {
-
-    let favArr = catalog.pizza.filter(d =>
-        user.likes.includes(d.idDish))
-    let favDOM = favArr.map((d, i) =>
-        <MiniDishContainer
-            key={i}
-            dish={d}
-        />
-    )
-
-    return (
+const Favorites = ({likes}) =>
         <div className={s.List}>
-            {favDOM}
+            <DishesDOMContainer filterBy={likes} />
         </div>
-    )
-};
 
 export default Favorites;
 

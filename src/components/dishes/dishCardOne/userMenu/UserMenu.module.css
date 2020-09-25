@@ -1,0 +1,15 @@
+.like_share{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.like_share>div{
+    margin: 10px 20px;
+}
+.userMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

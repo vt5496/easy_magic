@@ -1,0 +1,7 @@
+.word{
+    font-size: 20px;
+    font-family: sans-serif;
+    border: 2px solid rosybrown;
+    width: 96%;
+    cursor: pointer;
+}

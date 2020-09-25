@@ -2,22 +2,12 @@ import React from "react";
 
 import s from './catalog.module.css'
 import Sort from "../../../someWhereUsesComp/SortBy/sortBy";
-import MiniDishContainer from "../../../someWhereUsesComp/dishCard/miniDishCard/MiniDishContainer";
+import DishesDOMContainer from "../../../dishes/dishesDOM/DishesDOMContainer";
 
-const Catalog = (props) => {
-
-    let catalogDOM = props.catalog.pizza.map((dish, i) =>
-         <MiniDishContainer
-            key={i}
-            dish={dish}
-        />);
-
-    return (
+const Catalog = ({sortedBy}) =>
         <div className={s.container}>
-            <Sort sortedBy={props.sortedBy}/>
-            {catalogDOM}
+            <Sort sortedBy={sortedBy}/>
+            <DishesDOMContainer />
         </div>
-    )
-};
 
 export default Catalog;

@@ -1,14 +1,7 @@
-.container{
-    display: flex;
-    justify-content: center;
-}
 
 .main{
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 500px;
 }
 

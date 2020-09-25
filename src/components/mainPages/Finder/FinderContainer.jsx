@@ -2,26 +2,27 @@ import React from "react";
 import {connect} from "react-redux";
 import Finder from "./Finder";
 import {
-    finderDishsAC, finderDishsEmptyAC,
+    finderDishesAC, finderDishesEmptyAC,
     finderWordsAC, finderWordsEmptyAC,
 } from "../../../redux/finder-reducer";
-import {readNewFinderTextAC} from "../../../redux/user-reducer";
+import {cleanFinderTextAC, readNewFinderTextAC} from "../../../redux/user-reducer";
 
-let mapStateToProps = state => ({
+const mapStateToProps = state => ({
     catalog: state.catalog,
     user: state.user,
-    finderDishsArr: state.finder.dishs,
-    finderWordsArr: state.finder.words
+    dishesFinder: state.finder.dishes,
 })
 
-let mapDispatchToProps = dispatch => ({
-    readNewFinderInputValue: text => dispatch(readNewFinderTextAC(text)),
+const mapDispatchToProps = dispatch => ({
+    sendInputValueToState: text => dispatch(readNewFinderTextAC(text)),
 
-    finderDishs: dish => dispatch(finderDishsAC(dish)),
-    finderDishsEmpty: () => dispatch(finderDishsEmptyAC()),
+    sendFinderDishesToState: idDish => dispatch(finderDishesAC(idDish)),
+    cleanFinderDishesInState: () => dispatch(finderDishesEmptyAC()),
 
-    finderWords: dish => dispatch(finderWordsAC(dish)),
-    finderWordsEmpty: () => dispatch(finderWordsEmptyAC())
+    sendFinderWordsToState: idDish => dispatch(finderWordsAC(idDish)),
+    cleanFinderWordsInState: () => dispatch(finderWordsEmptyAC()),
+
+    cleanFinderInputInState: () => dispatch(cleanFinderTextAC())
 })
 
 const FinderContainer = connect(mapStateToProps, mapDispatchToProps)(Finder);

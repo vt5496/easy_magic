@@ -16,8 +16,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     },
     {
@@ -37,8 +37,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     },
     {
@@ -58,8 +58,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     },
     {
@@ -79,8 +79,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     },
     {
@@ -100,8 +100,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     },
     {
@@ -121,8 +121,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     },
     {
@@ -143,8 +143,8 @@ const initialState = [
         searchText: '',
         search: [],
         settings: [],
-        historyOders: [],
-        popularityDishs: [],
+        historyOrders: [],
+        popularityDishes: [],
         offers: []
     }
 ];
@@ -166,8 +166,8 @@ const usersReducer = (state = initialState,
                 newCommentText: [],
                 likes: [],
                 settings: [],
-                historyOders: [],
-                popularityDishs: [],
+                historyOrders: [],
+                popularityDishes: [],
                 offers: []
             }
             return [...state, newUser]

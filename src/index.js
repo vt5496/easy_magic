@@ -1,11 +1,11 @@
+import React from 'react';
+
 import App from './App';
 
 import store from "./redux/redux-store";
 
-import React from 'react';
 import {render} from 'react-dom';
 import {HashRouter} from "react-router-dom";
-
 import {Provider} from "react-redux";
 
 
@@ -13,7 +13,7 @@ export const rerenderEntireTree = () => {
     render(
         <HashRouter>
             <Provider store={store}>
-                <App/>
+                <App />
             </Provider>
         </HashRouter>,
         document.getElementById('root')

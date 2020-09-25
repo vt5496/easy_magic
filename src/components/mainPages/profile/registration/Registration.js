@@ -4,99 +4,91 @@ import {Link} from "react-router-dom";
 import s from './registration.module.css'
 
 
-const Registration = (props) => {
+const Registration = ({
+                          loginValue, passwordValue, emailValue,
+                          nameValue, surnameValue, imgValue, numberValue,
+
+                          readNewLoginRegText, readNewPasswordRegText,
+                          readNewNameRegText, readNewSurnameRegText,
+                          readNewEmailRegText, readNewNumberRegText,
+                          readNewImgRegText,
+
+                          reg, fakeReg
+                      }) => {
 
     //create refs
-    let newNameRegistrationElement = React.createRef()
-    let newSurnameRegistrationElement = React.createRef();
-    let newEmailRegistrationElement = React.createRef();
-    let newNumberRegistrationElement = React.createRef();
-    let newImgRegistrationElement = React.createRef();
-    let newLoginRegistrationElement = React.createRef();
-    let newPasswordRegistrationElement = React.createRef();
+    const nameInputRef = React.createRef()
+    const surnameInputRef = React.createRef();
+    const emailInputRef = React.createRef();
+    const numberInputRef = React.createRef();
+    const imgInputRef = React.createRef();
+    const loginInputRef = React.createRef();
+    const passwordInputRef = React.createRef();
 
-    //values of inputs
-    let newNameRegistrationTextValue = props.name;
-    let newSurnameRegistrationTextValue = props.surname;
-    let newEmailRegistrationTextValue = props.email;
-    let newNumberRegistrationTextValue = props.number;
-    let newImgRegistrationTextValue = props.img;
-    let newLoginRegistrationTextValue = props.login;
-    let newPasswordRegistrationTextValue = props.password;
+    const getRefValue = ref => ref.current.value
+
 
     //f dispatch
-    let readNewNameRegistrationText = () => {
-        let text = newNameRegistrationElement.current.value;
-        props.readNewNameRegistrationText(text)
-    };
-    let readNewSurnameRegistrationText = () => {
-        let text = newSurnameRegistrationElement.current.value;
-        props.readNewSurnameRegistrationText(text)
-    };
-    let readNewEmailRegistrationText = () => {
-        let text = newEmailRegistrationElement.current.value;
-        props.readNewEmailRegistrationText(text)
-    };
-    let readNewNumberRegistrationText = () => {
-        let text = newNumberRegistrationElement.current.value;
-        props.readNewNumberRegistrationText(text)
-    };
-    let readNewImgRegistrationText = () => {
-        let text = newImgRegistrationElement.current.value;
-        props.readNewImgRegistrationText(text)
-    };
-    let readNewLoginRegistrationText = () => {
-        let text = newLoginRegistrationElement.current.value;
-        props.readNewLoginRegistrationText(text)
-    };
-    let readNewPasswordRegistrationText = () => {
-        let text = newPasswordRegistrationElement.current.value;
-        props.readNewPasswordRegistrationText(text)
-    };
+    const onReadNameInput = () =>
+        readNewNameRegText(getRefValue(nameInputRef))
+    const onReadSurnameInput = () =>
+        readNewSurnameRegText(getRefValue(surnameInputRef))
+    const onReadEmailInput = () =>
+        readNewEmailRegText(getRefValue(emailInputRef))
+    const onReadNumberInput = () =>
+        readNewNumberRegText(getRefValue(numberInputRef))
+    const onReadImgInput = () =>
+        readNewImgRegText(getRefValue(imgInputRef))
+    const onReadLoginInput = () =>
+        readNewLoginRegText(getRefValue(loginInputRef))
+    const onReadPasswordInput = () =>
+        readNewPasswordRegText(getRefValue(passwordInputRef))
 
-    let registrationButton = (e) => {
+    const registrationButton = e => {
         e.preventDefault();
-        (props.login && props.password && props.email && props.name &&
-            props.surname && props.img && props.number) ?
-            props.registration(props) :
-            props.fakeRegistration()
+        (loginValue && passwordValue && emailValue && nameValue &&
+            surnameValue && imgValue && numberValue) ?
+            reg(loginValue, passwordValue, emailValue,
+                nameValue, surnameValue,
+                imgValue, numberValue) :
+            fakeReg()
     }
 
     return (
         <div className={s.main}>
-            <form action="" className={s.form}>
+            <form onSubmit={registrationButton} className={s.form}>
                 <h2>Registration</h2>
 
                 <span>Name</span>
-                <input ref={newNameRegistrationElement} onChange={readNewNameRegistrationText}
-                       value={newNameRegistrationTextValue} type="text"/>
+                <input ref={nameInputRef} onChange={onReadNameInput}
+                       value={nameValue} type="text"/>
 
                 <span>Surname</span>
-                <input ref={newSurnameRegistrationElement} onChange={readNewSurnameRegistrationText}
-                       value={newSurnameRegistrationTextValue} type="text"/>
+                <input ref={surnameInputRef} onChange={onReadSurnameInput}
+                       value={surnameValue} type="text"/>
 
                 <span>Email</span>
-                <input ref={newEmailRegistrationElement} onChange={readNewEmailRegistrationText}
-                       value={newEmailRegistrationTextValue} type="email"/>
+                <input ref={emailInputRef} onChange={onReadEmailInput}
+                       value={emailValue} type="email"/>
 
                 <span>Number</span>
-                <input ref={newNumberRegistrationElement} onChange={readNewNumberRegistrationText}
-                       value={newNumberRegistrationTextValue} type="tel"/>
+                <input ref={numberInputRef} onChange={onReadNumberInput}
+                       value={numberValue} type="tel"/>
 
                 <span>Img</span>
-                <input ref={newImgRegistrationElement} onChange={readNewImgRegistrationText}
-                       value={newImgRegistrationTextValue} type="text"/>
+                <input ref={imgInputRef} onChange={onReadImgInput}
+                       value={imgValue} type="text"/>
 
                 <span>Login</span>
-                <input ref={newLoginRegistrationElement} onChange={readNewLoginRegistrationText}
-                       value={newLoginRegistrationTextValue} type="text"/>
+                <input ref={loginInputRef} onChange={onReadLoginInput}
+                       value={loginValue} type="text"/>
 
                 <span>Password</span>
-                <input ref={newPasswordRegistrationElement} onChange={readNewPasswordRegistrationText}
-                       value={newPasswordRegistrationTextValue} type="password"/>
+                <input ref={passwordInputRef} onChange={onReadPasswordInput}
+                       value={passwordValue} type="password"/>
 
                 <Link exact to='/authorization'>
-                    <button onClick={registrationButton}>Sign up</button>
+                    <button>Sign up</button>
                 </Link>
             </form>
         </div>

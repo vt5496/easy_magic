@@ -4,51 +4,44 @@ import s from './authorization.module.css'
 import {Link} from "react-router-dom";
 
 const Authorization = ({
-                           readNewLoginText, readNewPasswordText,
+                           sendLoginValueToState, sendPasswordValueToState,
                            authorization, fakeAuthorization,
-                           login, password, users
+                           loginValue, passwordValue, users
                        }) => {
 
-    let loginInputRef = React.createRef();
-    let passwordInputRef = React.createRef();
+    const loginInputRef = React.createRef();
+    const passwordInputRef = React.createRef();
+    const getRefValue = ref => ref.current.value;
 
-    let loginInputValue = login;
-    let passwordInputValue = password;
+    const getUser = (loginValue) => users.filter(user => user.login === loginValue)[0]
 
-    let onReadNewLoginText = () => {
-        let text = loginInputRef.current.value;
-        readNewLoginText(text)
-    };
+    const onReadLoginInput = () =>
+        sendLoginValueToState(getRefValue(loginInputRef))
+    const onReadPasswordInput = () =>
+        sendPasswordValueToState(getRefValue(passwordInputRef))
 
-    let onReadNewPasswordText = () => {
-        let text = passwordInputRef.current.value;
-        readNewPasswordText(text)
-    };
-
-
-    let authorizationButton = (e) => {
+    let onAuthorization = (e) => {
         e.preventDefault();
-        let user = users.find(user => user.login === login)
-        return (user) ?
-            (user.password === password) ?
-                authorization({login, password}, user)
+        return (getUser(loginValue)) ?
+            (getUser(loginValue).password === passwordInputRef) ?
+                authorization({loginValue, passwordInputRef}, getUser(loginValue))
                 : fakeAuthorization() : fakeAuthorization()
     }
 
     return (
         <div className={s.main}>
-            <form className={s.form} action="">
+            <form onSubmit={onAuthorization} className={s.form}>
                 <h2>Authorization</h2>
 
                 <span>Login</span>
-                <input ref={loginInputRef} onChange={onReadNewLoginText} type="text" value={loginInputValue}/>
+                <input ref={loginInputRef} onChange={onReadLoginInput} type="text"
+                       value={loginValue}/>
 
                 <span>Password</span>
-                <input ref={passwordInputRef} onChange={onReadNewPasswordText} type="password"
-                       value={passwordInputValue}/>
+                <input ref={passwordInputRef} onChange={onReadPasswordInput} type="password"
+                       value={passwordValue}/>
 
-
-                <button onClick={authorizationButton}><Link className={s.link} exact to="/home">Sign in</Link>
+                <button><Link className={s.link} exact to="/home">Sign in</Link>
                 </button>
 
             </form>

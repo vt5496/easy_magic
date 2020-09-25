@@ -1,13 +1,14 @@
 const initialState = {
 
-    pizza: [
+    dishes: [
         {
             idDish: 0,
-            name: "Карбонара",
-            img: "https://make-eat.ru/assets/cache_image/img/piczcza-karbonara_0x280_d74.jpg",
+            type: 'Pizza',
+            name: 'Карбонара',
+            img: 'https://make-eat.ru/assets/cache_image/img/piczcza-karbonara_0x280_d74.jpg',
             cost: 120,
             weight: 1000,
-            composition: "сыр моцарелла, бекон, ветчина, помидор черри, перепелиное яйцо, соус бальзамико, соус сливочный, пармезан",
+            composition: 'сыр моцарелла, бекон, ветчина, помидор черри, перепелиное яйцо, соус бальзамико, соус сливочный, пармезан',
             description: '',
             likes: 0,
             comments: [
@@ -25,11 +26,12 @@ const initialState = {
         },
         {
             idDish: 1,
-            name: "Барбекю",
-            img: "https://www.pizzaking.ua/resizer/resize/?w=472&h=472&type=c&image=./upload/catalog/4/4d169bd84ebf79363161938d676f2b78",
+            type: 'Pizza',
+            name: 'Барбекю',
+            img: 'https://holyfood.com.ua/wp-content/uploads/2018/11/pizza-pizza-barbeku-1200x1200.jpg',
             cost: 140,
             weight: 800,
-            composition: "Шашлык, соус BBQ, бекон, грибы, моцарелла, перец болгарский, лук, зелень",
+            composition: 'Шашлык, соус BBQ, бекон, грибы, моцарелла, перец болгарский, лук, зелень',
             description: '',
             likes: 0,
             comments: [],
@@ -40,11 +42,12 @@ const initialState = {
         },
         {
             idDish: 2,
-            name: "Вегетарианская",
-            img: "https://lh3.googleusercontent.com/proxy/MySJ4M1YWr2xcMGQO0GV_IQ9-xK37DmOoehRT-oTcJ9EP4XGxs2wZuwJ_sZnaAEAsD78LTT4W5CfYWMLdOCRkF1BtU60qqYR2JpL9bO0uv2Br8-cf47EAzVnuvE",
+            type: 'Pizza',
+            name: 'Вегетарианская',
+            img: 'http://i.siteapi.org/h3oBdjtFkoGSjE7AdquYJ6iWnKk=/fit-in/1024x768/center/top/filters:quality(95)/95144f557808652.s.siteapi.org/img/9aba494d756b2ce7dc6dc6f87e84bff71a38b4c4.png',
             cost: 80,
             weight: 800,
-            composition: "грибы, моцарелла, перец болгарский, лук, зелень, помидор, огурец соленый, маслины ",
+            composition: 'грибы, моцарелла, перец болгарский, лук, зелень, помидор, огурец соленый, маслины ',
             description: '',
             likes: 0,
             comments: [],
@@ -55,11 +58,12 @@ const initialState = {
         },
         {
             idDish: 3,
-            name: "4 сыра",
-            img: "https://vilkin.pro/wp-content/uploads/2019/11/picca-chetire-sira-770x513.jpg",
+            type: 'Pizza',
+            name: '4 сыра',
+            img: 'https://holyfood.com.ua/wp-content/uploads/2018/11/pizza-pizza-4-syra-1200x1200.jpg',
             cost: 120,
             weight: 900,
-            composition: "сыр моцарелла, Дор Блю, радомер, пармезан",
+            composition: 'сыр моцарелла, Дор Блю, радомер, пармезан',
             description: '',
             likes: 0,
             comments: [],
@@ -70,11 +74,12 @@ const initialState = {
         },
         {
             idDish: 4,
-            name: "Филадельфия",
-            img: "https://nikolaev-pizza.znakachestva.ua/uploads/thumbs/store/product/365x365_ff828d64a70b9aeb4fa90334d5deca72.png",
+            type: 'Pizza',
+            name: 'Филадельфия',
+            img: 'https://nikolaev-pizza.znakachestva.ua/uploads/thumbs/store/product/365x365_ff828d64a70b9aeb4fa90334d5deca72.png',
             cost: 150,
             weight: 850,
-            composition: "Лосось, сыр пармезан, моцарелла, сыр филадельфия, маслины, пармезан, кунжут",
+            composition: 'Лосось, сыр пармезан, моцарелла, сыр филадельфия, маслины, пармезан, кунжут',
             description: '',
             likes: 0,
             comments: [],
@@ -85,11 +90,12 @@ const initialState = {
         },
         {
             idDish: 5,
-            name: "Гавайская",
-            img: "https://images.pizza33.ua/products/product/MQg5e2GkYToS2p4P3Xtc1ykakPMFcRFM.jpg",
+            type: 'Pizza',
+            name: 'Гавайская',
+            img: 'https://holyfood.com.ua/wp-content/uploads/2018/11/pizza-pizza-havaiskaya-1200x1200.jpg',
             cost: 120,
             weight: 800,
-            composition: "Курица, ананас, моцарелла, соус",
+            composition: 'Курица, ананас, моцарелла, соус',
             description: '',
             likes: 0,
             comments: [],
@@ -106,7 +112,7 @@ const catalogReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD-LIKE':
             return {
-                ...state, pizza: [...state.pizza.map(dish =>
+                ...state, dishes: [...state.dishes.map(dish =>
                     (action.idDish === dish.idDish) ?
                         {...dish, likes: ++dish.likes} :
                         dish
@@ -114,7 +120,7 @@ const catalogReducer = (state = initialState, action) => {
             }
         case 'REMOVE-LIKE':
             return {
-                ...state, pizza: [...state.pizza.map(dish =>
+                ...state, dishes: [...state.dishes.map(dish =>
                     (action.idDish === dish.idDish) ?
                         {...dish, likes: --dish.likes} :
                         dish
@@ -122,7 +128,7 @@ const catalogReducer = (state = initialState, action) => {
             }
         case 'ADD-COMMENT':
             return {
-                ...state, pizza: [...state.pizza.map(dish =>
+                ...state, dishes: [...state.dishes.map(dish =>
                     (action.idDish === dish.idDish) ?
                         {
                             ...dish,
@@ -141,14 +147,14 @@ const catalogReducer = (state = initialState, action) => {
             return {
                 ...state,
                 sortBy: action.sortBy,
-                pizza: [...state.pizza.sort(action.func)]
+                dishes: [...state.dishes.sort(action.func)]
             }
 
         case 'SORT-BY-COST':
             return {
                 ...state,
                 sortBy: action.sortedBy,
-                pizza: [...state.pizza.sort(action.func)]
+                dishes: [...state.dishes.sort(action.func)]
             }
 
         default:
@@ -158,16 +164,16 @@ const catalogReducer = (state = initialState, action) => {
     return state;
 }
 
-export const addLikeAC = ({idDish}) => ({
+export const addLikeAC = idDish => ({
     type: 'ADD-LIKE',
     idDish
 });
-export const removeLikeAC = ({idDish}) => ({
+export const removeLikeAC = idDish => ({
     type: 'REMOVE-LIKE',
     idDish,
 });
 
-export const addCommentAC = ({user}, {idDish, comments}) => {
+export const addCommentAC = (user, {idDish, comments}) => {
     let newCommentTextValue = user.newCommentText.find(d => d.idDish === idDish).value;
     return ({
         type: 'ADD-COMMENT',

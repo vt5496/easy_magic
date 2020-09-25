@@ -14,8 +14,8 @@ const initialState = {
     finderText: '',
     search: [],
     settings: [],
-    historyOders: [],
-    popularityDishs: [],
+    historyOrders: [],
+    popularityDishes: [],
     offers: []
 };
 
@@ -31,20 +31,21 @@ const userReducer = (state = initialState, action) => {
         case 'REMOVE-LIKE':
             return {
                 ...state,
-                likes: [...state.likes.filter(like => like !== action.idDish)]
+                likes: [...state.likes.filter(like =>
+                    like !== action.idDish)]
             }
 
         case 'READ-NEW-COMMENT-TEXT':
             return {
                 ...state,
-                newCommentText: [...state.newCommentText.map(commentObject => {
-                    return (commentObject.idDish === action.idDish) ?
+                newCommentText: [...state.newCommentText.map(commentObject =>
+                    (commentObject.idDish === action.idDish) ?
                         {idDish: commentObject.idDish, value: action.newCommentText} :
-                        commentObject;
-                })]
+                        commentObject
+                )]
 
             }
-        case 'CREATE-READ-NEW-COMMENT-TEXT':
+        case 'CREATE-NEW-COMMENT-OBJECT':
             return {
                 ...state,
                 newCommentText: [...state.newCommentText, {
@@ -65,7 +66,13 @@ const userReducer = (state = initialState, action) => {
         case 'NEW-FINDER-TEXT':
             return {
                 ...state,
-                finderText: action.text
+                finderText: action.newFinderText
+            }
+
+        case 'CLEAN-FINDER-TEXT':
+            return {
+                ...state,
+                finderText: ''
             }
         default:
             return state;
@@ -74,28 +81,29 @@ const userReducer = (state = initialState, action) => {
 }
 
 
-export const readNewCommentTextAC = (newCommentText, {idDish}) => {
-    return ({
+export const readNewCommentTextAC = (newCommentText, idDish) =>
+    ({
         type: 'READ-NEW-COMMENT-TEXT',
         idDish,
         newCommentText
     })
-};
-export const createReadNewCommentTextAC = (newCommentText, {idDish}) => {
-    return ({
-        type: 'CREATE-READ-NEW-COMMENT-TEXT',
+export const createNewCommentObjectAC = (newCommentText, idDish) =>
+    ({
+        type: 'CREATE-NEW-COMMENT-OBJECT',
         idDish,
         newCommentText
     })
-};
 
-
-export const readNewFinderTextAC = newFinderText => {
-    return ({
+export const readNewFinderTextAC = newFinderText =>
+    ({
         type: 'NEW-FINDER-TEXT',
         newFinderText
     })
-};
+
+export const cleanFinderTextAC = () =>
+    ({
+        type: 'CLEAN-FINDER-TEXT'
+    })
 
 
 export default userReducer;

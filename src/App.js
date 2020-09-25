@@ -14,24 +14,24 @@ import HomeContainer from "./components/mainPages/home/HomeContainer";
 
 import s from './app.module.css';
 import Error404 from "./components/someWhereUsesComp/Error404/Erкor404";
-import UniqueIDHeader from "./components/someWhereUsesComp/dishCard/oneDishCard/UniqueIDHeader/UniqueIDHeader";
+import GetIdFromURL from "./components/dishes/dishCardOne/GetIdFromURL/GetIdFromURL";
 
 
 const App = () =>
     <div className={s.container}>
 
-        <div className={s.main}>
+        <div className={s.content}>
             <Switch>
                 <Route exact path='/' component={HomeContainer} />
                 <Route path='/favorites' component={FavoritesContainer}/>
                 <Route path='/finder' component={FinderContainer}/>
                 <Route path='/shopcart' component={ShoppingCart}/>
                 <Route path='/profile' component={Profile}/>
-                <Route path='/catalog' component={CatalogContainer}/>
+                <Route exact path='/catalog' component={CatalogContainer}/>
 
-                <Route path='/:id' component={UniqueIDHeader} />
+                <Route exact path='/catalog/:id' component={GetIdFromURL} />
 
-                <Route path='/error404' component={Error404}/>
+                <Route component={Error404}/>
             </Switch>
         </div>
 

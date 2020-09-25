@@ -1,67 +1,66 @@
 import React from "react";
 
 import s from './Finder.module.css'
-import MiniDishContainer from "../../someWhereUsesComp/dishCard/miniDishCard/MiniDishContainer";
+import DishesDOMContainer from "../../dishes/dishesDOM/DishesDOMContainer";
+import WordsContainer from "./words/WordsContainer";
+import cleanImg from './../../../img/cancel-circle.svg'
+import {compose} from "redux";
 
 const Finder = ({
-                    user, catalog,
-                    finderDishsArr, finderWordsArr,
-                    readNewFinderInputValue,
-                    finderDishs, finderDishsEmpty,
-                    finderWords, finderWordsEmpty
+                    user, catalog, dishesFinder,
+
+                    sendInputValueToState,
+                    sendFinderDishesToState, cleanFinderDishesInState,
+                    sendFinderWordsToState, cleanFinderWordsInState,
+
+                    cleanFinderInputInState
                 }) => {
-    let finderInputRef = React.createRef();
-    let finderInputValue = user.finderText;
-    let onReadFinderInput = () => {
-        let text = finderInputRef.current.value;
-        readNewFinderInputValue(text)
-        finderWordsEmpty()
-        return (text) ?
-            catalog.pizza.map(dish => {
-                if (dish.name.toLowerCase().includes(text.toLowerCase())) {
-                    finderWords(dish)
-                }
-            }) :
-            finderWordsEmpty()
+
+    const inputRef = React.createRef();
+    const getRefValue = ref => ref.current.value;
+    const getInputValueFromState = user => user.finderText;
+
+    const checkStrValue = (value1, value2) =>
+        value1.toLowerCase().includes(value2.toLowerCase())
+    const checkAndDo = (boolean, func, arg) =>
+        boolean && func(arg)
+
+
+    const onReadInput = () => {
+        sendInputValueToState(getRefValue(inputRef))
+        cleanFinderWordsInState();
+        (getRefValue(inputRef)) ?
+            catalog.dishes.map(dish =>
+                checkAndDo(checkStrValue(dish.name, getRefValue(inputRef)),
+                    sendFinderWordsToState, dish.idDish)
+            ) :
+            cleanFinderWordsInState()
     }
-    let findWordsArr = catalog.pizza.filter(d =>
-        finderWordsArr.includes(d.idDish))
-    let textsDOM = findWordsArr.map(d =>
-        <div className={s.textsDOM}>
-            {d.name}
-        </div>)
-
-
     let onFindDish = (e) => {
         e.preventDefault()
-        finderDishsEmpty()
-        finderWordsEmpty()
-        let text = finderInputRef.current.value;
-        return (text) ?
-            catalog.pizza.map(dish => {
-                if (dish.name.toLowerCase().includes(text.toLowerCase())) {
-                    finderDishs(dish)
-                }
-            }) :
-            finderDishsEmpty()
+        cleanFinderDishesInState()
+        cleanFinderWordsInState();
+        (getRefValue(inputRef)) ?
+            catalog.dishes.map(dish =>
+                checkAndDo(checkStrValue(dish.name, getRefValue(inputRef)),
+                    sendFinderDishesToState, dish.idDish)
+            ) :
+            cleanFinderDishesInState()
     }
-    let findDishsArr = catalog.pizza.filter(d =>
-        finderDishsArr.includes(d.idDish))
-    let findDOM = findDishsArr.map((d, i) =>
-        <MiniDishContainer
-            key={i}
-            dish={d}
-        />)
+
+    const cleanFinderInput = compose(cleanFinderInputInState, cleanFinderWordsInState)
 
     return (
         <div className={s.List}>
             <form onSubmit={onFindDish}>
                 <input type="text" className={s.input}
-                       ref={finderInputRef} onChange={onReadFinderInput} value={finderInputValue}/>
+                       ref={inputRef} onChange={onReadInput}
+                       value={getInputValueFromState(user)}/>
                 <button className={s.button}>Find</button>
             </form>
-            {textsDOM}
-            {findDOM}
+            <img src={cleanImg} className={s.clean} onClick={cleanFinderInput}/>
+            <WordsContainer/>
+            <DishesDOMContainer filterBy={dishesFinder}/>
         </div>
     );
 }

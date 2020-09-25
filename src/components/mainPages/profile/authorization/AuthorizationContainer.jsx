@@ -9,16 +9,16 @@ import {
 
 let mapStateToProps = (state) => {
     return {
-        login: state.authorization.login,
-        password: state.authorization.password,
+        loginValue: state.authorization.login,
+        passwordValue: state.authorization.password,
         users: state.users
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        readNewLoginText: (text) => dispatch(readNewLoginTextAC(text)),
-        readNewPasswordText: (text) => dispatch(readNewPasswordTextAC(text)),
+        sendLoginValueToState: (text) => dispatch(readNewLoginTextAC(text)),
+        sendPasswordValueToState: (text) => dispatch(readNewPasswordTextAC(text)),
         authorization: (props, user) => dispatch(authorizationAC(props, user)),
         fakeAuthorization: () => dispatch(fakeAuthorizationAC())
     }

@@ -1,0 +1,38 @@
+.main{
+    border: 3px solid #ffca9b;
+    border-radius: 3px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 15px 10px 5px 10px;
+    cursor: pointer;
+}
+.main:hover{
+    background-color: #ecece3;
+}
+.title{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+}
+
+.descriptionText{
+    margin: 5px;
+}
+
+.descriptionImg{
+    height: 100px;
+}
