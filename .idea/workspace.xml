@@ -19,84 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="Added router parameters. &#10;Refactored something code.">
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/Descriptions/Descriptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/Descriptions/Descriptions.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/Likes/Like.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/Likes/LikeContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardMini/MiniDish.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardMini/MiniDishContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/GetIdFromURL/GetIdFromURL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/OneDish.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/OneDish.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/OneDishContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/TitleImg/TitleImg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/TitleImg/TitleImg.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/addComment/AddComment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/addComment/AddComment.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/addComment/addCommentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/buttonBack/ButtonBack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/buttonBack/ButtonBack.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/comments/Comments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/comments/comments.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/comments/oneComment/OneComment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/comments/oneComment/OneCommentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/userMenu/UserMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/userMenu/UserMenu.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishesDOM/DishesDOM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dishes/dishesDOM/DishesDOMContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mainPages/Finder/words/words.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/orders-reducer.js" afterDir="false" />
+    <list default="true" id="0653fda8-4f69-420c-aa25-b102bb789bcc" name="Default Changelist" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/img/cancel-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/heart-o.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/keyboard_arrow_left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/keyboard_arrow_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/share.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/Finder/Finder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/Finder/Finder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/Finder/Finder.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/Finder/Finder.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/Finder/FinderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/Finder/FinderContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/favorites/Favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/favorites/Favorites.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/favorites/FavoritesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/favorites/FavoritesContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/HomeContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/HomeContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/HomeNavMenu/HomeNavMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/HomeNavMenu/HomeNavMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/HomeNavMenu/HomeNavMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/HomeNavMenu/HomeNavMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/catalog/Catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/catalog/Catalog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/catalog/CatalogContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/catalog/CatalogContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/home/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/home/home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/profile/authorization/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/profile/authorization/Authorization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/profile/authorization/AuthorizationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/profile/authorization/AuthorizationContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/profile/registration/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/profile/registration/Registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainPages/profile/registration/RegistrationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/profile/registration/RegistrationContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/SortBy/sortBy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/someWhereUsesComp/SortBy/sortBy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/miniDishCard/MiniDish.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/miniDishCard/MiniDishContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/miniDishCard/likes/Like.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/miniDishCard/likes/like.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishes/Likes/like.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/miniDishCard/miniDish.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishes/dishCardMini/miniDish.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/OneDish.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/OneDish.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/OneDishContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/UniqueIDHeader/UniqueIDHeader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/comments/Comments.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/comments/addComment/AddComment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/comments/comments.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/Finder/words/Words.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/comments/oneComment/OneComment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/comments/oneComment/oneComment.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/comments/oneComment/OneComment.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/likes/Like.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/likes/like.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/dishCard/oneDishCard/share/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dishes/dishCardOne/share/share.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/footer/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/someWhereUsesComp/footer/footer.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authorization-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authorization-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/catalog-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/catalog-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/finder-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/finder-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/oders-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainPages/Finder/words/WordsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/registration-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/registration-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/user-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/user-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +169,7 @@
       <workItem from="1600486072360" duration="17368000" />
       <workItem from="1600516989517" duration="8380000" />
       <workItem from="1600617331449" duration="1952000" />
+      <workItem from="1601054810756" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="Add reducers, изменил функционал ADD-LIKE, добавил функционал ADD-COMMENT">
       <created>1594322646528</created>
@@ -314,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600318381877</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Refactoring">
+      <created>1601054896560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601054896560</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +295,8 @@
     <MESSAGE value="Change catalog, add sort in catalog, refactoring." />
     <MESSAGE value="Add Error404 when page no finded.&#10;Refactor Finder, Favorite." />
     <MESSAGE value="Added router parameters. &#10;Refactored something code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added router parameters. &#10;Refactored something code." />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="131" key="#Deployment" timestamp="1594322978767">
@@ -430,10 +372,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1600018999449" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1600318384252">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1601054899566">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1600318384252" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1601054899566" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592828845844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
